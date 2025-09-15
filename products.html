@@ -31,9 +31,11 @@
                     <i class="fa-solid fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
                 </button>
-                <button class="user-btn">
-                    <i class="fa-solid fa-user"></i>
-                </button>
+                <a href="form.html" class="user-btn-link">
+                    <button class="user-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="menu-toggle">☰</div>
@@ -79,6 +81,32 @@
             </div>
         </section>
 
+        <section class="offers-section">
+            <div class="offer-card">
+                <img src="assets/frapuccino.png" alt="Any Day Offers">
+                <div class="offer-content">
+                    <h4>Any Day Offers</h4>
+                    <p>New Phenomenon Burger Taste</p>
+                    <span>12.90 TL</span>
+                </div>
+            </div>
+            <div class="offer-card red">
+                <img src="assets/cookie.png" alt="Other Flavors">
+                <div class="offer-content">
+                    <h4>Other Flavors</h4>
+                    <p>Save room, we made cookies</p>
+                    <span>3.90 TL</span>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="assets/map.png" alt="Find a KFC Store">
+                <div class="offer-content">
+                    <h4>Find a KFC Store</h4>
+                    <p>Near You</p>
+                </div>
+            </div>
+        </section>
+
         <section class="product-grid-section">
             <div class="filter-buttons-container">
                 <!-- Los botones de filtro se cargarán aquí -->
@@ -89,24 +117,36 @@
         </section>
     </main>
 
-    <div class="cart-overlay" id="cart-overlay">
-      <div class="cart" id="cart">
+    <!-- HTML del Carrito (Nueva Estructura) -->
+    <aside id="cart-sidebar">
         <div class="cart-header">
-          <h2>Shopping Cart</h2>
-          <button class="close-cart-btn" id="close-cart-btn">&times;</button>
+            <div class="cart-header-top">
+                <h3>Tu Orden</h3>
+                <div class="cart-header-actions">
+                    <button class="reset-cart-btn" title="Vaciar Carrito"><i class="fa-solid fa-trash"></i> Resetear</button>
+                    <button class="close-cart-btn">&times;</button>
+                </div>
+            </div>
         </div>
-        <div class="cart-items" id="cart-items">
-          <!-- Cart items will be dynamically added here -->
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span class="price" id="cart-subtotal">$0</span>
+            </div>
+            <div class="summary-line">
+                <span>Total</span>
+                <span class="price" id="cart-total-final">$0</span>
+            </div>
+            <a href="cart.html" class="checkout-btn-link"><button class="checkout-btn">Pagar Ahora</button></a>
+            <button class="continue-shopping-btn">Seguir Comprando</button>
         </div>
-        <div class="cart-summary">
-          <p>Total: <span id="cart-total">$0.00</span></p>
-          <button class="checkout-btn">Checkout</button>
-        </div>
-      </div>
-    </div>
+    </aside>
+    <div id="cart-overlay"></div>
 
+    <!-- Scripts en el orden correcto -->
     <script src="main.js"></script>
-    <script src="productos.js"></script>
     <script src="cart.js"></script>
+    <script src="productos.js"></script>
 </body>
 </html>

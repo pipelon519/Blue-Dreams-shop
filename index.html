@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
   <header>
@@ -28,9 +29,11 @@
                 <i class="fa-solid fa-shopping-bag"></i>
                 <span class="cart-count">0</span>
             </button>
-            <button class="user-btn">
-                <i class="fa-solid fa-user"></i>
-            </button>
+            <a href="form.html" class="user-btn-link">
+              <button class="user-btn">
+                  <i class="fa-solid fa-user"></i>
+              </button>
+            </a>
         </div>
     </div>
     <div class="menu-toggle">☰</div>
@@ -230,43 +233,38 @@
     </div>
 </footer>
 
-<!-- HTML del Carrito Añadido -->
+<!-- HTML del Carrito (Nueva Estructura) -->
 <aside id="cart-sidebar">
     <div class="cart-header">
         <div class="cart-header-top">
-            <h3>Cart</h3>
-            <span class="order-number">Order #3243</span>
-            <button class="close-cart-btn">&times;</button>
-        </div>
-        <div class="order-options">
-            <button class="option-btn active">Delivery</button>
-            <button class="option-btn">Dine in</button>
-            <button class="option-btn">Take away</button>
+            <h3>Tu Orden</h3>
+            <div class="cart-header-actions">
+                <button class="reset-cart-btn" title="Vaciar Carrito"><i class="fa-solid fa-trash"></i> Resetear</button>
+                <button class="close-cart-btn">&times;</button>
+            </div>
         </div>
     </div>
     <div class="cart-items"></div>
     <div class="cart-footer">
         <div class="summary-line">
-            <span>Items</span>
-            <span class="price">COP $0</span>
+            <span>Subtotal</span>
+            <span class="price" id="cart-subtotal">$0</span>
         </div>
-        <div class="summary-line discounts">
-            <span>Discounts</span>
-            <span class="price">-COP $0</span>
-        </div>
-        <div class="total-cost">
+        <div class="summary-line">
             <span>Total</span>
-            <span class="price">COP $0</span>
+            <span class="price" id="cart-total-final">$0</span>
         </div>
-        <button class="checkout-btn">Place an order</button>
+        <a href="cart.html" class="checkout-btn-link"><button class="checkout-btn">Pagar Ahora</button></a>
+        <button class="continue-shopping-btn">Seguir Comprando</button>
     </div>
 </aside>
 <div id="cart-overlay"></div>
 
-<!-- Scripts Añadidos en el Orden Correcto -->
+
+<!-- Scripts en el orden correcto -->
 <script src="main.js"></script>
-<script src="productos.js"></script>
 <script src="cart.js"></script>
+<script src="productos.js"></script>
 
 </body>
 </html>

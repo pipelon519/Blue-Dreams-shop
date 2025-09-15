@@ -1,27 +1,29 @@
 
-# Blueprint: New Product Page Design
+# Blueprint: Blue Dreams E-Commerce
 
 ## Overview
-This document outlines the plan to create a new product page with a modern design, inspired by the user's provided images. The page will include a functional shopping cart overlay.
+This document outlines the plan for building and refining the Blue Dreams Coffee & Bakery e-commerce website. The goal is to create a visually appealing, user-friendly, and fully functional online store.
 
-## Current Plan
-1.  **Fix Cart and Implement Local Storage:**
-    *   Modify `cart.js` to use `localStorage` to persist cart items across page reloads.
-    *   Ensure the cart correctly loads from `localStorage` on page load.
-    *   Verify that adding, removing, and updating quantities works correctly and syncs with `localStorage`.
+## Current Plan: Cart Overhaul & Bug Fixes
 
-2.  **Update User Button:**
-    *   In all relevant HTML files (`index.html`, `products.html`, `about.html`, `contact.html`), wrap the user icon button in a link to `form.html`.
-    *   In `style.css`, restyle the `.user-btn` to be circular, white, and have appropriate padding.
+1.  **Implement New Shopping Cart Design (Based on Image):**
+    *   **HTML Structure:** Rebuild the cart's HTML (`<aside id="cart-sidebar">`) in all pages to match the provided design, including a header with "Your Order" and "Clear Cart" buttons, an item list area, and a footer with Subtotal, Total, and action buttons.
+    *   **CSS Styling (`cart.css`):** Create a new `cart.css` to style the cart with the Blue Dreams theme, replicating the layout, item controls, and summary section from the user's image.
+    *   **JavaScript Logic (`cart.js`):**
+        *   Ensure persistence with `localStorage`.
+        *   Implement `updateCart()` to render items, calculate totals, and update the display.
+        *   Add event listeners for: closing on outside click, clearing the entire cart, increasing/decreasing item quantity, and deleting a single item.
+    *   **Create Checkout Page (`cart.html`):** Build a new, dedicated `cart.html` page that the main "Checkout" button will link to.
 
-3.  **Add Category Filter Buttons:**
-    *   Create a container for the filter buttons in `products.html` above the product grid.
-    *   Dynamically generate the filter buttons from the product categories in `productos.js`.
-    *   Implement the filtering logic in `productos.js` to show/hide products based on the selected category.
-    *   Style the filter buttons and their active state in `productos.css`.
+2.  **Fix Critical Script Loading Order:**
+    *   In `index.html`, `products.html`, `about.html`, and `contact.html`, ensure that `<script src="cart.js"></script>` is loaded *before* `<script src="productos.js"></script>`. This is essential for the "Add to Cart" functionality to work correctly.
 
-4.  **Redesign Hero Section:**
-    *   Update `products.html` with a new two-column layout for the hero section, based on the Starbucks image.
+3.  **Finalize User Button Style:**
+    *   Add the new CSS rules to `style.css` to make the user button circular, white, and with a hover effect, as previously discussed.
 
-5.  **Verify Overall Functionality:**
-    *   Test the entire site to ensure the hero section, filters, cart, and user button all work as expected.
+## Completed Tasks
+
+*   **Hero Section Redesign:** Updated `products.html` with a new two-column layout.
+*   **Offers Section:** Added the offers section back to `products.html`.
+*   **User Button Link:** Wrapped the user icon in a link to `form.html` across all pages.
+*   **Initial Local Storage:** Implemented the first version of `localStorage` in `cart.js`.

@@ -18,6 +18,30 @@ const products = [
         tag: 'new'
     },
     {
+        id: 'cc-01',
+        name: 'Café Latte',
+        price: 9500,
+        image: 'assets/img13.png',
+        category: 'cafe-caliente',
+        description: 'Café espresso con leche vaporizada y una fina capa de espuma.'
+    },
+    {
+        id: 'p-01',
+        name: 'Torta de Limón',
+        price: 9500,
+        image: 'assets/torta-limon.png',
+        category: 'postres',
+        description: 'Suave y esponjosa torta con un glaseado de limón.'
+    },
+    {
+        id: 'g-01',
+        name: 'Grano Origen Sierra Nevada',
+        price: 45000,
+        image: 'assets/grano-sierra.png',
+        category: 'granos',
+        description: 'Café de altura con notas cítricas y un cuerpo balanceado. Bolsa de 250g.'
+    },
+    {
         id: 'cf-02',
         name: 'Chocolate Frappuccino',
         price: 13500,
@@ -42,16 +66,7 @@ const products = [
         category: 'cafe-helado',
         description: 'Una cremosa mezcla de vainilla, café y leche, cubierta con crema.'
     },
-
-    // --- CATEGORÍA: CAFÉ CALIENTE ---
-    {
-        id: 'cc-01',
-        name: 'Café Latte',
-        price: 9500,
-        image: 'assets/img13.png',
-        category: 'cafe-caliente',
-        description: 'Café espresso con leche vaporizada y una fina capa de espuma.'
-    },
+    
     {
         id: 'cc-02',
         name: 'Americano',
@@ -78,14 +93,7 @@ const products = [
     },
 
     // --- CATEGORÍA: POSTRES ---
-    {
-        id: 'p-01',
-        name: 'Torta de Limón',
-        price: 9500,
-        image: 'assets/torta-limon.png',
-        category: 'postres',
-        description: 'Suave y esponjosa torta con un glaseado de limón.'
-    },
+    
     {
         id: 'p-02',
         name: 'Brownie con Helado',
@@ -109,16 +117,6 @@ const products = [
         image: 'assets/cookie.png',
         category: 'postres',
         description: 'Galleta gigante recién horneada con trozos de chocolate derretido.'
-    },
-
-    // --- CATEGORÍA: GRANOS ---
-    {
-        id: 'g-01',
-        name: 'Grano Origen Sierra Nevada',
-        price: 45000,
-        image: 'assets/grano-sierra.png',
-        category: 'granos',
-        description: 'Café de altura con notas cítricas y un cuerpo balanceado. Bolsa de 250g.'
     },
     {
         id: 'g-02',
