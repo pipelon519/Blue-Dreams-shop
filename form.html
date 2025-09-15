@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login / Registro</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="form.css">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Blue Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
 </head>
-<body>
-  <header>
-    <div class="logo-out">
-      <img src="assets/logo.png" alt="Blue Dreams logo">
-    </div>
-    <div class="nav-capsula">
-      <nav class="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="products.html">Productos</a>
-        <a href="about.html">Sobre</a>
-        <a href="contact.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="form-container">
-      <div class="form-wrapper">
-        <div class="logo-container">
-          <svg class="logo" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="2"/>
-            <circle cx="20" cy="20" r="4" stroke="white" stroke-width="2"/>
-            <path d="M20 8V12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M20 28V32" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M32 20L28 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 20L8 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M29.6569 10.3431L26.8284 13.1716" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M13.1716 26.8284L10.3431 29.6569" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M29.6569 29.6569L26.8284 26.8284" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M13.1716 13.1716L10.3431 10.3431" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+<body class="form-page-body">
+    <header>
+        <div class="logo-out">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Blue Dreams logo">
+            </a>
         </div>
-        <h1>Welcome back!</h1>
-        <p class="subtitle">Sign in to access your guided meditations, daily practices, and personal journey</p>
-        
-        <form id="loginForm">
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
-          </div>
-          <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="••••••••">
-            <span class="password-toggle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="3.5" stroke="white" stroke-width="1.5"/>
-                    <path d="M20.188 10.9344C20.5762 11.581 20.7703 12.3314 20.7703 13.0909C20.7703 14.8087 19.8974 16.3473 18.5093 17.3091C16.8971 18.4357 14.606 19.0909 12 19.0909C9.39403 19.0909 7.10288 18.4357 5.49073 17.3091C4.10264 16.3473 3.22974 14.8087 3.22974 13.0909C3.22974 12.3314 3.42379 11.581 3.81202 10.9344" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-            </span>
-          </div>
-          <div class="options">
-            <label class="remember-me">
-              <input type="checkbox" checked>
-              Remember me
-            </label>
-            <a href="#" class="forgot-password">Forgot password?</a>
-          </div>
-          <button type="submit" class="login-btn">Log In</button>
-          <div class="divider">Or</div>
-          <button type="button" class="google-login-btn">
-            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
-            Sign In with Google
-          </button>
-        </form>
-        <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
-      </div>
+        <div class="nav-capsula">
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="products.html">Productos</a>
+                <a href="about.html">Sobre</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="menu-toggle">☰</div>
+    </header>
+
+    <div class="form-main-container">
+        <div class="form-box">
+            <!-- Formulario de Iniciar Sesión (Login) -->
+            <div class="form-container" id="login-form">
+                <h1 class="form-title">Bienvenido de Vuelta</h1>
+                <form action="#">
+                    <div class="input-group">
+                        <label for="login-email">Correo Electrónico</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="form-button">Iniciar Sesión</button>
+                </form>
+                <p class="toggle-form-text">¿No tienes una cuenta? <a href="#" id="show-signup">Regístrate aquí</a></p>
+            </div>
+
+            <!-- Formulario de Registro (Sign Up) -->
+            <div class="form-container" id="signup-form">
+                <h1 class="form-title">Crea tu Cuenta</h1>
+                <form action="#">
+                    <div class="input-group">
+                        <label for="signup-name">Nombre</label>
+                        <input type="text" id="signup-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Correo Electrónico</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Contraseña</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <button type="submit" class="form-button">Registrarse</button>
+                </form>
+                <p class="toggle-form-text">¿Ya tienes una cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formBox = document.querySelector('.form-box');
+            const showSignupLink = document.getElementById('show-signup');
+            const showLoginLink = document.getElementById('show-login');
+
+            showSignupLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                formBox.classList.add('show-signup');
+            });
+
+            showLoginLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                formBox.classList.remove('show-signup');
+            });
+        });
+    </script>
 </body>
 </html>

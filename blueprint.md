@@ -4,26 +4,27 @@
 ## Overview
 This document outlines the plan for building and refining the Blue Dreams Coffee & Bakery e-commerce website. The goal is to create a visually appealing, user-friendly, and fully functional online store.
 
-## Current Plan: Cart Overhaul & Bug Fixes
+## Current Plan: Form Redesign
 
-1.  **Implement New Shopping Cart Design (Based on Image):**
-    *   **HTML Structure:** Rebuild the cart's HTML (`<aside id="cart-sidebar">`) in all pages to match the provided design, including a header with "Your Order" and "Clear Cart" buttons, an item list area, and a footer with Subtotal, Total, and action buttons.
-    *   **CSS Styling (`cart.css`):** Create a new `cart.css` to style the cart with the Blue Dreams theme, replicating the layout, item controls, and summary section from the user's image.
-    *   **JavaScript Logic (`cart.js`):**
-        *   Ensure persistence with `localStorage`.
-        *   Implement `updateCart()` to render items, calculate totals, and update the display.
-        *   Add event listeners for: closing on outside click, clearing the entire cart, increasing/decreasing item quantity, and deleting a single item.
-    *   **Create Checkout Page (`cart.html`):** Build a new, dedicated `cart.html` page that the main "Checkout" button will link to.
-
-2.  **Fix Critical Script Loading Order:**
-    *   In `index.html`, `products.html`, `about.html`, and `contact.html`, ensure that `<script src="cart.js"></script>` is loaded *before* `<script src="productos.js"></script>`. This is essential for the "Add to Cart" functionality to work correctly.
-
-3.  **Finalize User Button Style:**
-    *   Add the new CSS rules to `style.css` to make the user button circular, white, and with a hover effect, as previously discussed.
+1.  **Rediseñar la Página de Formulario (`form.html`):
+    *   **Fondo:** Aplicar la imagen `assets/fondo2.jpg` como fondo de pantalla completo.
+    *   **Navegación:** Integrar la misma barra de navegación presente en las demás páginas para mantener la consistencia del diseño.
+    *   **Doble Funcionalidad:** Reestructurar el contenido para tener dos formularios en uno:
+        *   Un formulario para **Iniciar Sesión** (visible por defecto).
+        *   Un formulario para **Registrarse** (inicialmente oculto).
+    *   **Interactividad:** Añadir enlaces o botones que permitan al usuario cambiar fácilmente entre la vista de inicio de sesión y la de registro. La transición será fluida y animada.
+    *   **Estilo:** Adaptar los estilos en `form.css` para que el contenedor del formulario mantenga el efecto de "cristal" (glassmorphism) sobre el nuevo fondo, asegurando que sea legible y atractivo.
 
 ## Completed Tasks
 
+*   **Cart Overhaul & Bug Fixes:**
+    *   Implemented the new shopping cart design based on the user-provided image.
+    *   Corrected the script loading order on all pages (`index.html`, `products.html`, `about.html`, `contact.html`).
+    *   Created `cart.css` with the new styles.
+    *   Rewrote `cart.js` to handle `localStorage` persistence, dynamic rendering, and all cart actions (add, remove, update quantity, clear).
+    *   Created the final checkout page, `cart.html`.
+    *   Fixed the bug in `productos.js` preventing items from being added to the cart.
 *   **Hero Section Redesign:** Updated `products.html` with a new two-column layout.
 *   **Offers Section:** Added the offers section back to `products.html`.
 *   **User Button Link:** Wrapped the user icon in a link to `form.html` across all pages.
-*   **Initial Local Storage:** Implemented the first version of `localStorage` in `cart.js`.
+
