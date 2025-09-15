@@ -130,17 +130,17 @@ const products = [
     },
     {
         id: 'g-03',
-        name: 'Grano Orgánico Huila',
+        name: 'Grano Orgánico Antioquia',
         price: 55000,
-        image: 'assets/grano-huila.png',
+        image: 'assets/grano-antioquia.png',
         category: 'granos',
         description: 'Cultivado sin pesticidas, este café ofrece un sabor puro y notas afrutadas. Bolsa de 250g.'
     },
     {
         id: 'g-04',
-        name: 'Grano Descafeinado',
+        name: 'Grano De La Finca',
         price: 42000,
-        image: 'assets/grano-descafeinado.png',
+        image: 'assets/grano-finca.png',
         category: 'granos',
         description: 'Todo el sabor del café, sin la cafeína. Proceso de lavado natural. Bolsa de 250g.'
     }
