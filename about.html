@@ -3,62 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Blue Dreams</title>
+    <title>Sobre Mí - Blue Dreams</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="about.css">
 </head>
-<body>
+<body class="about-page-body">
     <header>
-         <div class="logo-out">
-            <a href="index.html">
-                <img src="assets/logo.png" alt="Blue Dreams logo">
-            </a>
-        </div>
-        <div class="nav-capsula">
-            <nav class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="index.html#esencia">Esencia</a>
-                <a href="products.html">Productos</a>
-                <a href="about.html" class="active">Sobre</a>
-                <a href="contact.html">Contacto</a>
-            </nav>
-            <div class="header-actions">
-                <button class="cart-btn">
-                    <i class="fa-solid fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </button>
-                <a href="form.html" class="user-btn-link">
-                    <button class="user-btn">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="menu-toggle">☰</div>
-    </header>
+        <div class="logo-out">
+           <a href="index.html">
+               <img src="assets/logo.png" alt="Blue Dreams logo">
+           </a>
+       </div>
+       <div class="nav-capsula">
+           <nav class="nav-links">
+               <a href="index.html">Inicio</a>
+               <a href="index.html#esencia">Esencia</a>
+               <a href="products.html">Productos</a>
+               <a href="about.html" class="active">Sobre</a>
+               <a href="contact.html">Contacto</a>
+           </nav>
+           <div class="header-actions">
+               <button class="cart-btn">
+                   <i class="fa-solid fa-shopping-bag"></i>
+                   <span class="cart-count">0</span>
+               </button>
+               <a href="form.html" class="user-btn-link">
+                   <button class="user-btn">
+                       <i class="fa-solid fa-user"></i>
+                   </button>
+               </a>
+           </div>
+       </div>
+       <div class="menu-toggle">☰</div>
+   </header>
 
-    <main class="about-page-content">
+    <main class="about-container">
+        
+        <!-- HERO SECTION -->
         <section class="about-hero">
             <div class="about-hero-text">
-                <h1>La Historia de un Sueño Azul</h1>
-                <p>Blue Dreams no es solo una pastelería, es el sueño de un joven de 16 años hecho realidad. Es la pasión por crear momentos de felicidad y dulzura.</p>
+                <span class="subtitle">La Mente Detrás del Sueño</span>
+                <h1>Conoce al Creador</h1>
+                <p>Una historia de pasión, creatividad y el deseo de llevar alegría a través de la dulzura.</p>
+            </div>
+            <img src="assets/img1.png" alt="Inspiración de Blue Dreams" class="about-hero-image">
+        </section>
+
+        <!-- SECCIÓN SOBRE MÍ -->
+        <section class="about-me-section">
+            <div class="about-me-image-wrapper">
+                <img src="assets/mi cara.jpg" alt="Foto de Samuel, fundador de Blue Dreams">
+            </div>
+            <div class="about-me-text-wrapper">
+                <h2>Hola, soy Samuel</h2>
+                <p>Con solo 16 años, decidí transformar mi pasión por la repostería y el diseño en un proyecto que hoy llamo con orgullo <strong>Blue Dreams</strong>. Este no es solo un negocio para mí; es la materialización de un sueño que he cultivado desde muy joven.</p>
+                <p>Inspirado por la belleza de los atardeceres y la calma del océano, cada creación busca capturar un pedacito de esa magia. Mi misión es simple: crear experiencias inolvidables a través de sabores únicos y diseños que cuenten una historia. Cada postre es un lienzo, y cada cliente, una nueva oportunidad para compartir felicidad.</p>
+                <p>Gracias por acompañarme en esta dulce aventura. ¡Espero que disfrutes cada momento y cada bocado tanto como yo disfruto creándolo para ti!</p>
             </div>
         </section>
 
-        <section class="founder-story">
-            <div class="story-image">
-                <img src="assets/samuel.jpg" alt="Samuel, fundador de Blue Dreams">
-            </div>
-            <div class="story-text">
-                <h2>De la Inspiración a la Creación</h2>
-                <p>Con solo 16 años, <strong>Samuel</strong>, nuestro fundador, comenzó a soñar con un lugar donde cada detalle contara una historia. Un lugar donde la pastelería no fuera solo un postre, sino una experiencia completa. Inspirado por los colores del cielo al atardecer y la tranquilidad del océano, nació "Blue Dreams".</p>
-                <p>Lo que empezó como un pequeño proyecto personal, horneando para amigos y familiares, rápidamente se convirtió en una vocación. La dedicación por encontrar los ingredientes perfectos y la obsesión por el diseño de cada producto, dieron forma a la filosofía que hoy nos define: crear delicias únicas que alimentan tanto el paladar como el alma.</p>
-                <p>Hoy, ese sueño azul es un espacio donde la creatividad y el sabor no tienen límites. Te invitamos a ser parte de nuestra historia.</p>
+        <!-- SECCIÓN DE VALORES -->
+        <section class="about-values-section">
+            <h2>Mi Compromiso</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Innovación Constante</h3>
+                    <p>Siempre estoy experimentando con nuevos sabores, texturas y diseños para sorprenderte.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3>Calidad sin Excusas</h3>
+                    <p>Utilizo solo los mejores ingredientes, porque creo que la calidad es la base de un sabor excepcional.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Pasión en cada Detalle</h3>
+                    <p>Desde el primer boceto hasta el último toque, cada postre está hecho con dedicación y amor.</p>
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer-container">
@@ -104,7 +132,7 @@
         </div>
     </footer>
 
-    <!-- HTML del Carrito (Nueva Estructura) -->
+    <!-- Carrito -->
     <aside id="cart-sidebar">
         <div class="cart-header">
             <div class="cart-header-top">
@@ -132,9 +160,8 @@
     <div id="cart-overlay"></div>
 
 
-    <!-- Scripts en el orden correcto -->
+    <!-- Scripts -->
     <script src="main.js"></script>
     <script src="cart.js"></script>
-    <script src="productos.js"></script>
 </body>
 </html>

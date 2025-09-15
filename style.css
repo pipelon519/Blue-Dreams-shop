@@ -130,6 +130,9 @@ header.scrolled .nav-capsula {
   box-shadow: 0 10px 30px rgba(2, 18, 44, 0.45);
   justify-content: space-between;
 }
+header.scrolled .nav-capsula a{
+  color: black;
+}
 /* =========================
    BOTÓN DE USUARIO
    ========================= */
@@ -511,6 +514,30 @@ header.scrolled .nav-capsula {
     font-weight: bold;
     position: relative;
 }
+
+.slider .content .btn {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: var(--primary); /* Texto en el azul de tu marca */
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(0, 21, 64, 0.3); /* Sombra más pronunciada */
+    margin-top: 20px; /* Espacio para separarlo del título */
+}
+
+.slider .content .btn:hover {
+    background-color: white; /* Blanco sólido al pasar el ratón */
+    color: #1a3c9e; /* Azul más oscuro */
+    transform: translateY(-3px); /* Efecto de "levantarse" */
+    box-shadow: 0 12px 30px rgba(0, 21, 64, 0.35);
+}
+
 .slider .content div:nth-child(2)::before{
     position: absolute;
     left: 60%;

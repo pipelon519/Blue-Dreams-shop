@@ -7,62 +7,108 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
-<body>
+<body class="contact-page-body">
     <header>
         <div class="logo-out">
-            <a href="index.html">
-                <img src="assets/logo.png" alt="Blue Dreams logo">
-            </a>
-        </div>
-        <div class="nav-capsula">
-            <nav class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="index.html#esencia">Esencia</a>
-                <a href="products.html">Productos</a>
-                <a href="about.html">Sobre</a>
-                <a href="contact.html" class="active">Contacto</a>
-            </nav>
-            <div class="header-actions">
-                <button class="cart-btn">
-                    <i class="fa-solid fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </button>
-                <a href="form.html" class="user-btn-link">
-                    <button class="user-btn">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="menu-toggle">☰</div>
-    </header>
+           <a href="index.html">
+               <img src="assets/logo.png" alt="Blue Dreams logo">
+           </a>
+       </div>
+       <div class="nav-capsula">
+           <nav class="nav-links">
+               <a href="index.html">Inicio</a>
+               <a href="index.html#esencia">Esencia</a>
+               <a href="products.html">Productos</a>
+               <a href="about.html">Sobre</a>
+               <a href="contact.html" class="active">Contacto</a>
+           </nav>
+           <div class="header-actions">
+               <button class="cart-btn">
+                   <i class="fa-solid fa-shopping-bag"></i>
+                   <span class="cart-count">0</span>
+               </button>
+               <a href="form.html" class="user-btn-link">
+                   <button class="user-btn">
+                       <i class="fa-solid fa-user"></i>
+                   </button>
+               </a>
+           </div>
+       </div>
+       <div class="menu-toggle">☰</div>
+   </header>
 
-    <main class="contact-page-content">
+    <main>
         <section class="contact-hero">
             <h1>Contáctanos</h1>
-            <p>Estamos aquí para ayudarte. Rellena el formulario y te responderemos lo antes posible.</p>
+            <p>¿Tienes alguna pregunta, sugerencia o simplemente quieres saludar? ¡Estamos aquí para escucharte!</p>
         </section>
 
-        <section class="contact-form-section">
-            <form action="#" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="contact-main-content">
+            
+            <!-- Columna del Formulario -->
+            <div class="contact-form-wrapper">
+                <h2>Ponte en Contacto</h2>
+                <p>Completa el formulario y te responderemos lo antes posible.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <!-- Columna de Información de Contacto -->
+            <div class="contact-info-wrapper">
+                <div class="contact-info-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="details">
+                        <h3>Teléfono</h3>
+                        <a href="tel:+573101234567">+57 310 123 4567</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contact-info-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="details">
+                        <h3>Correo Electrónico</h3>
+                        <a href="mailto:contacto@bluedreams.com">contacto@bluedreams.com</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="contact-info-item">
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="details">
+                        <h3>Whatsapp</h3>
+                        <a href="https://wa.me/573101234567" target="_blank">Chatea con nosotros</a>
+                    </div>
                 </div>
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
-            </form>
-        </section>
+                <div class="contact-info-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="details">
+                        <h3>Nuestra Ubicación</h3>
+                        <p>Calle Falsa 123, Bogotá, Colombia</p>
+                    </div>
+                </div>
+                <div class="contact-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.96911762739!2d-74.072092!3d4.603383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a0f9a5cc3f%3A0x8479b8d27c6f6b!2sPlaza%20de%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1689366367823!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer class="footer-container">
@@ -108,8 +154,7 @@
         </div>
     </footer>
 
-
-    <!-- HTML del Carrito (Nueva Estructura) -->
+    <!-- Carrito -->
     <aside id="cart-sidebar">
         <div class="cart-header">
             <div class="cart-header-top">
@@ -136,10 +181,8 @@
     </aside>
     <div id="cart-overlay"></div>
 
-
-    <!-- Scripts en el orden correcto -->
+    <!-- Scripts -->
     <script src="main.js"></script>
     <script src="cart.js"></script>
-    <script src="productos.js"></script>
 </body>
 </html>

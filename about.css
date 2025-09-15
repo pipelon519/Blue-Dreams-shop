@@ -3,10 +3,10 @@
 /* ======================================= */
 
 :root {
-    --about-bg: #f8f9fa;
-    --about-card-bg: #ffffff;
-    --about-text-primary: #212529;
-    --about-text-secondary: #6c757d;
+    --about-bg: #408ad4;
+    --about-card-bg: #000000;
+    --about-text-primary: #e1eefc;
+    --about-text-secondary: #cfe9ff;
     --about-accent: var(--primary); /* Reutilizamos el azul primario */
 }
 
