@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="circle">
-        BLUE DREAMS SHOP - dulceria para todos los gustos - Delicias unicas - 
+        <span>BLUE DREAMS SHOP - dulceria para todos los gustos - Delicias unicas - </span>
     </div>
     <div class="content">
         <div>💙✨</div>
@@ -92,9 +92,6 @@
   </div>
 </section>
 
-<!-- =============================================== -->
-<!--    NUEVA SECCIÓN DE PRODUCTOS DESTACADOS    -->
-<!-- =============================================== -->
 <section class="featured-products-section">
     <h2 class="section-title">Nuestros Favoritos</h2>
     <div class="products-container">
@@ -109,7 +106,12 @@
                     <span>4.8</span>
                 </div>
                 <h3>Caramel Latte</h3>
-                <div class="price-tag">$13.000</div>
+                <div class="price-and-add">
+                    <span class="price-tag">$13.000</span>
+                    <button class="add-to-cart-btn-showcase" onclick="window.addToCart({ id: 'prod_001', name: 'Caramel Latte', price: 13000, image: 'assets/img10.png' })">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -123,7 +125,12 @@
                     <span>4.9</span>
                 </div>
                 <h3>Strawberry Frappe</h3>
-                <div class="price-tag">$12.500</div>
+                <div class="price-and-add">
+                    <span class="price-tag">$12.500</span>
+                    <button class="add-to-cart-btn-showcase" onclick="window.addToCart({ id: 'prod_002', name: 'Strawberry Frappe', price: 12500, image: 'assets/img9.png' })">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -137,7 +144,12 @@
                     <span>4.7</span>
                 </div>
                 <h3>Vanilla Bean</h3>
-                <div class="price-tag">$12.000</div>
+                <div class="price-and-add">
+                    <span class="price-tag">$12.000</span>
+                    <button class="add-to-cart-btn-showcase" onclick="window.addToCart({ id: 'prod_003', name: 'Vanilla Bean', price: 12000, image: 'assets/img11.png' })">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -151,13 +163,17 @@
                     <span>5.0</span>
                 </div>
                 <h3>Hazelnut Brew</h3>
-                <div class="price-tag">$13.500</div>
+                <div class="price-and-add">
+                    <span class="price-tag">$13.500</span>
+                    <button class="add-to-cart-btn-showcase" onclick="window.addToCart({ id: 'prod_004', name: 'Hazelnut Brew', price: 13500, image: 'assets/img12.png' })">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
-
 
 <div class="esencia2">
   <h2>Nuestra Esencia Cafetera</h2>
@@ -187,7 +203,7 @@
 
 <section class="cta" id="cta">
     <h2>¿Listo para comenzar?</h2>
-    <a href="form.html" class="btn">Crear Cuenta</a>
+    <a href="form.html" class="btn btn-primary btn-cta">Crear Cuenta</a>
 </section>
 
 <footer class="footer-container">
@@ -233,7 +249,6 @@
     </div>
 </footer>
 
-<!-- HTML del Carrito (Nueva Estructura) -->
 <aside id="cart-sidebar">
     <div class="cart-header">
         <div class="cart-header-top">
@@ -264,7 +279,6 @@
 <!-- Scripts en el orden correcto -->
 <script src="main.js"></script>
 <script src="cart.js"></script>
-<script src="productos.js"></script>
 
 </body>
 </html>

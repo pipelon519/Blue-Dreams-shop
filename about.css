@@ -1,78 +1,197 @@
-/* Estilos para la página Sobre Nosotros */
+/* ======================================= */
+/*          ESTILOS - PÁGINA "SOBRE"         */
+/* ======================================= */
 
-.about-page-content {
-    padding: 0;
+:root {
+    --about-bg: #f8f9fa;
+    --about-card-bg: #ffffff;
+    --about-text-primary: #212529;
+    --about-text-secondary: #6c757d;
+    --about-accent: var(--primary); /* Reutilizamos el azul primario */
 }
 
+/* Base para la página */
+.about-page-body {
+    background-color: var(--about-bg);
+    color: var(--about-text-primary);
+    padding-top: 100px; /* Asegura espacio para el header fijo */
+}
+
+/* Contenedor principal para centrar el contenido */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
 .about-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/about-hero-bg.jpg'); /* Asegúrate de tener una imagen de fondo adecuada */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 40vh;
+    background: var(--about-card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+}
+
+.about-hero-text {
+    flex: 1;
+    padding: 60px;
+}
+
+.about-hero-text .subtitle {
+    font-weight: 600;
+    color: var(--about-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
 
 .about-hero-text h1 {
     font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .about-hero-text p {
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-size: 1.1rem;
+    color: var(--about-text-secondary);
+    line-height: 1.6;
 }
 
-.founder-story {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 80px 10%;
-    background-color: #f9f9f9;
-}
-
-.story-image {
+.about-hero-image {
     flex: 1;
-    max-width: 400px;
+    max-height: 450px;
+    object-fit: cover;
 }
 
-.story-image img {
+/* =========================
+   SECCIÓN SOBRE MÍ
+   ========================= */
+.about-me-section {
+    display: flex;
+    align-items: flex-start; /* Alinea los items al inicio */
+    gap: 50px;
+    padding: 60px 0;
+    margin-bottom: 50px;
+}
+
+.about-me-image-wrapper {
+    flex-basis: 40%;
+    position: relative;
+}
+
+.about-me-image-wrapper img {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-.story-text {
-    flex: 2;
+.about-me-text-wrapper {
+    flex-basis: 60%;
 }
 
-.story-text h2 {
+.about-me-text-wrapper h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: #002D62; /* Azul oscuro de la paleta */
+    margin-bottom: 25px;
+    color: var(--about-accent);
 }
 
-.story-text p {
-    font-size: 1.1rem;
+.about-me-text-wrapper p {
+    font-size: 1.05rem;
     line-height: 1.8;
+    color: var(--about-text-secondary);
     margin-bottom: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .founder-story {
+/* =========================
+   SECCIÓN DE VALORES (ESENCIA)
+   ========================= */
+.about-values-section {
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 50px;
+}
+
+.about-values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: var(--about-card-bg);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--about-accent);
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: var(--about-text-secondary);
+    line-height: 1.6;
+}
+
+/* =========================
+   REGLAS RESPONSIVE
+   ========================= */
+
+@media (max-width: 992px) {
+    .about-hero {
         flex-direction: column;
+    }
+    .about-hero-text {
+        padding: 40px;
         text-align: center;
     }
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+    .about-hero-image {
+        width: 100%;
+        max-height: 300px;
+    }
 
+    .about-me-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-body {
+        padding-top: 80px;
+    }
     .about-hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 }

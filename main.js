@@ -1,53 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Lógica para el menú hamburguesa
+    // ===================================
+    // Lógica para el Menú Hamburguesa
+    // ===================================
     const menuToggle = document.querySelector('.menu-toggle');
     const navCapsula = document.querySelector('.nav-capsula');
 
     if (menuToggle && navCapsula) {
         menuToggle.addEventListener('click', () => {
+            // Muestra u oculta el menú
             navCapsula.classList.toggle('active');
+
+            // Evita que el fondo se desplace cuando el menú está abierto
+            if (navCapsula.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Cierra el menú si se hace clic en un enlace (para SPA o navegación en la misma página)
+        navCapsula.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navCapsula.classList.contains('active')) {
+                    navCapsula.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
         });
     }
 
-    // Lógica para el carrito de compras (abrir/cerrar)
-    const cartBtn = document.querySelector('.cart-btn');
-    const cartSidebar = document.getElementById('cart-sidebar');
-    const closeCartBtn = document.querySelector('.close-cart-btn');
-    const cartOverlay = document.getElementById('cart-overlay');
-
-    if (cartBtn && cartSidebar && closeCartBtn && cartOverlay) {
-        cartBtn.addEventListener('click', () => {
-            cartSidebar.classList.add('active');
-            cartOverlay.classList.add('active');
-        });
-
-        closeCartBtn.addEventListener('click', () => {
-            cartSidebar.classList.remove('active');
-            cartOverlay.classList.remove('active');
-        });
-
-        cartOverlay.addEventListener('click', () => {
-            cartSidebar.classList.remove('active');
-            cartOverlay.classList.remove('active');
-        });
-    }
-
-    // Lógica para el header con scroll
+    // ===================================
+    // Lógica para el Header con Scroll
+    // ===================================
     const header = document.querySelector('header');
-    if(header) {
+    if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 40) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
     }
-});
 
-// Lógica para el slider principal de la página de inicio
-const mainSlider = document.querySelector('.slider');
+    // ===================================
+    // LÓGICA DEL SLIDER PRINCIPAL
+    // ===================================
+    const mainSlider = document.querySelector('.slider');
 if (mainSlider) {
     let list = mainSlider.querySelector('.list');
     let items = mainSlider.querySelectorAll('.list .item');
@@ -103,4 +103,34 @@ if (mainSlider) {
         
         runCarousel(); // Llama inicial para establecer la posición
     }
+}
+
+    // ========================================================
+    //  CONTROL CENTRALIZADO PARA ABRIR Y CERRAR EL CARRITO
+    // ========================================================
+    const cartBtn = document.querySelector('.cart-btn');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const closeCartBtn = document.querySelector('.close-cart-btn');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const continueShoppingBtn = document.querySelector('.continue-shopping-btn');
+
+    const toggleCart = () => {
+        if (cartSidebar && cartOverlay) {
+            cartSidebar.classList.toggle('active');
+            cartOverlay.classList.toggle('active');
+        }
+    };
+
+    if (cartBtn) cartBtn.addEventListener('click', toggleCart);
+    if (closeCartBtn) closeCartBtn.addEventListener('click', toggleCart);
+    if (cartOverlay) cartOverlay.addEventListener('click', toggleCart);
+    if (continueShoppingBtn) continueShoppingBtn.addEventListener('click', toggleCart);
+
+});
+
+
+// La lógica del slider no se modifica, se mantiene igual.
+const mainSlider = document.querySelector('.slider');
+if (mainSlider) {
+    // ... (código del slider sin cambios)
 }

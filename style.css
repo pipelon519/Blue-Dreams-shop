@@ -35,19 +35,19 @@ body {
    ========================= */
 
 header {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  z-index: 1000;
-  width: 85%;
-  transition: all 1s ease;
-  background: none;
+    position: fixed;
+    top: 0; /* Lo pegamos a la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex;
+    justify-content: space-between; /* Alinea logo a la izquierda y nav a la derecha */
+    align-items: center;
+    padding: 15px 40px; /* Espaciado interno (vertical y horizontal) */
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.4s ease, padding 0.4s ease;
 }
+
 
 .logo-out img {
   height: 100px;
@@ -288,9 +288,20 @@ header.scrolled .nav-capsula {
 }
 
 .product-showcase-card .card-info {
-    padding: 20px;
+    /* Aumentamos el padding superior para dejar espacio a la imagen */
+    padding-top: 120px; 
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
+
 
 .product-showcase-card .rating {
     font-size: 0.9rem;
@@ -307,28 +318,49 @@ header.scrolled .nav-capsula {
     font-size: 1.25rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Espacio antes del precio */
 }
 
-.product-showcase-card .price-tag {
-    background-color: #4a4e69;
-    color: white;
-    font-size: 1rem;
+/* Nuevo contenedor para alinear precio y botón */
+.price-and-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Empuja este contenedor hacia abajo */
+}
+
+/* Estilo para la etiqueta de precio rectangular */
+.price-and-add .price-tag {
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 1.1rem;
     font-weight: 600;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+/* Estilo para el botón de añadir circular */
+.add-to-cart-btn-showcase {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%; /* Círculo perfecto */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Centrar el círculo */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
-.product-showcase-card .price-tag:hover {
-    background-color: var(--primary);
+.add-to-cart-btn-showcase:hover {
+    background-color: #1a3c9e; /* Un poco más oscuro */
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 /* =========================
    CARRITO DE COMPRAS (SIDEBAR)
@@ -430,96 +462,7 @@ header.scrolled .nav-capsula {
 }
 
 
-/* =========================
-   MENÚ HAMBURGUESA (PANTALLA COMPLETA)
-   ========================= */
 
-@media (max-width: 768px) {
-    .nav-capsula {
-        /* Se convierte en un overlay que ocupa toda la pantalla */
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; /* Ocupa toda la altura */
-        background: rgba(0, 31, 104, 0.95); /* Color de fondo oscuro y semitransparente */
-        backdrop-filter: blur(15px);
-        border-radius: 0;
-        z-index: 1500;
-        gap: 30px;
-        
-        /* Oculto por defecto fuera de la pantalla */
-        transform: translateX(-100%);
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .nav-capsula.active { /* Clase que se añade con JS para mostrar */
-        transform: translateX(0);
-    }
-    
-    .nav-capsula .nav-links {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
-
-    .nav-capsula .nav-links a {
-        font-size: 1.8rem;
-        color: white;
-        padding: 10px;
-    }
-
-    .header-actions {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .btn {
-        opacity: 1; /* Hacemos visible el botón "Entrar" de nuevo */
-        width: auto;
-    }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-capsula {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    border-radius: 0;
-    padding: 40px 20px 20px 20px;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    z-index: 1500;
-    transition: left 0.5s ease;
-  }
-
-  .nav-capsula.active {
-    left: 0;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links a {
-    font-size: 1.5rem;
-  }
-}
 .slider{
   width: 100vw;
   height: 105vh;
@@ -626,86 +569,39 @@ header.scrolled .nav-capsula {
 /* //circle */
 
 .circle{
-    pointer-events: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    -webkit-mask: radial-gradient(var(--radius), transparent 100%, #000);
-    mask: radial-gradient(var(--radius), #0000 98%, #000);
-    backdrop-filter: blur(10px);
-    background: radial-gradient( 
-        calc(var(--radius) + 1px), #eee5 100%, #eee2
-    );
-    
+  pointer-events: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  -webkit-mask: radial-gradient(var(--radius), transparent 100%, #000);
+  mask: radial-gradient(var(--radius), #0000 98%, #000);
+  backdrop-filter: blur(10px);
+  background: radial-gradient( 
+      calc(var(--radius) + 1px), #eee5 100%, #eee2
+  );
+  
 }
 .circle span{
-    display: block;
-    position: absolute;
-    height: calc(var(--radius) * 2 + 50px);
-    top: 50%;
-    left: 50%;
-    --rotate: 50deg;
-    transform: translate(-50%, -50%) rotate(var(--rotate));
-    text-transform: uppercase;
-    color: #fff;
-    font-size: small;
-    animation: circleRotate 20s linear infinite;
+  display: block;
+  position: absolute;
+  height: calc(var(--radius) * 2 + 50px);
+  top: 50%;
+  left: 50%;
+  --rotate: 50deg;
+  transform: translate(-50%, -50%) rotate(var(--rotate));
+  text-transform: uppercase;
+  color: #fff;
+  font-size: small;
+  animation: circleRotate 20s linear infinite;
 }
 @keyframes circleRotate{
-    to{
-        transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
-    }
-}
-/* ======================================================== */
-/*           SOLUCIÓN RESPONSIVE PARA EL SLIDER             */
-/* ======================================================== */
-
-/* Para la mayoría de móviles (a partir de 768px hacia abajo) */
-@media (max-width: 768px) {
-  .slider .list .item {
-    margin-top: 200px;
-    margin-right: 0;
-    width: calc(var(--radius) * 2);
-    height: 100%;
-    text-align: center;
-    transform: rotate(0deg);
-    transition: transform 1s;
-    margin-left: calc(var(--radius) / 4);
-}
-  
-  .slider .list .item img {
-      height: 70%; 
-      width: auto;
-      object-fit: contain; 
-  }
-
-  /* 3. Centramos y ajustamos el texto principal */
-  .slider .content {
-    top: 55%; 
-    text-align: center;
-    width: 100%;
-  }
-
-  .slider .content div:nth-child(2) {
-    font-size: 5.5rem; /* Hacemos el título más pequeño */
-    letter-spacing: 5px;
-    font-weight: 700;
-  }
-  
-  .slider .content button {
-      margin-top: 15px;
-  }
-
-  /* 4. Reposicionamos las flechas para que sean fáciles de tocar. */
-  #prev, #next {
-    top: auto;
-    width: 45px;
-    height: 45px;
-    bottom: 5%;
+  to{
+      transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
   }
 }
+
 
 
 
@@ -997,255 +893,6 @@ footer {
 /* Responsive */
 
 
-/* ======================================= */
-/*           REGLAS RESPONSIVE             */
-/* ======================================= */
-
-/* Para tablets y dispositivos un poco más pequeños (hasta 992px) */
-@media (max-width: 1080px) {
-    header {
-        width: 100%;
-        padding: 10px 20px;
-        border-radius: 0;
-        background: var(--bg);
-        justify-content: space-between;
-    }
-    header.scrolled{
-      width: 100%;
-      padding: 10px 20px;
-      border-radius: 0;
-      background: var(--glass);
-      backdrop-filter: blur(10px);
-    
-    }
-    html, body{
-      width: 100%;
-    }
-
-    .esencia2 .contenedor-esencia {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        gap: 60px;
-        justify-items: center;
-    }
-
-    .esencia2 .item img{
-        max-width: 100%;
-    }
-
-    .esencia2 .item {
-      max-width: 450px;
-    }
-
-    .esencia2 .item::before {
-        font-size: 6rem; /* Reduce el tamaño de los números */
-        top: -20px;
-        left: -20px;
-    }
-
-    .esencia2 .centro {
-        grid-row: auto; /* Resetea la fila para el orden natural */
-        margin: 20px 0;
-    }
-
-    .esencia2 .centro img {
-        width: 100%;
-        max-width: 350px; /* Limita el tamaño de la imagen central */
-    }
-}
-
-
-/* Para la mayoría de móviles (hasta 768px) */
-@media (max-width: 768px) {
-
-    body{
-        padding-top: 100px; 
-    }
-    html, body{
-      width: 100%;
-    }
-
-    /* --- Header y Navegación --- */
-    header {
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        transform: none;
-        padding: 10px 20px;
-        border-radius: 0;
-        background: var(--bg);
-        justify-content: space-between;
-    }
-
-    header.scrolled {
-        border-radius: 0;
-        padding: 10px 20px;
-        box-shadow: none;
-        background: var(--glass);
-        backdrop-filter: blur(10px);
-    }
-    
-    header .logo-out img {
-        height: 70px;
-    }
-
-    header.scrolled .logo-out img {
-        transform: none;
-        height: 70px;
-        width: auto;
-        padding: 0;
-        background: transparent;
-        border-radius: 0;
-    }
-    
-    .nav-capsula {
-        /* El menú ahora es un overlay que se desliza */
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 31, 104, 0.95);
-        backdrop-filter: blur(15px);
-        border-radius: 0;
-        z-index: 1500;
-        gap: 30px;
-        /* Oculto por defecto fuera de la pantalla */
-        transform: translateX(-100%);
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .nav-capsula.active { /* Clase que se añade con JS para mostrar */
-        transform: translateX(0);
-    }
-
-    .nav-capsula .nav-links {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
-
-    .nav-capsula .nav-links a {
-        font-size: 1.8rem;
-        color: white;
-        padding: 10px;
-    }
-
-    /* --- Slider Principal --- */
-    .slider {
-        height: 90vh; /* Reduce la altura en móviles */
-    }
-    .slider .content div:nth-child(2) {
-        font-size: 2.5rem; /* Reduce el tamaño del título */
-        letter-spacing: 5px;
-    }
-    .slider .list .item {
-        width: 80vw; /* Ajusta el ancho del item */
-    }
-    .circle {
-        --radius: calc(100vw / 2.5);
-    }
-
-    /* --- Sección Esencia (Cards) --- */
-    .esencia-cards {
-        flex-direction: column; /* Apila las tarjetas */
-        align-items: center;
-        gap: 40px;
-    }
-    .dato {
-        max-width: 320px;
-        width: 100%;
-    }
-
-    /* --- Slider Productos "MAY" --- */
-    .may {
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .slider-productos {
-        width: 100%;
-        right: 0;
-        transform: translateX(0);
-        margin: 20px 0;
-    }
-
-    /* --- Footer --- */
-    footer .flex-wrap {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    footer .flex-1 {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-@media (max-width: 768px) {
-  .hero { flex-direction: column; text-align:center; padding:120px 20px; }
-  .hero-text { max-width:100%; }
-  .hero img { width:80%; margin-top:20px; } 
-  .esencia { flex-direction: column; padding:40px 20px; }
-  .dato { margin-bottom:20px; }
-  .btn{ opacity: 0; width: 0;}
-}
-
-/* Para móviles más pequeños (hasta 480px) */
-@media (max-width: 480px) {
-    /* --- Header --- */
-     header .logo-out img {
-        height: 60px; /* Más pequeño el logo */
-    }
-    
-    .body{
-      padding-top: 80px;
-    }
-
-    /* --- Slider Principal --- */
-    .slider .content div:nth-child(1) {
-        transform: translateY(0);
-    }
-    .slider .content div:nth-child(2) {
-        font-size: 2rem; /* Aún más pequeño el título */
-    }
-     .slider .content button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-     #prev, #next {
-        width: 40px;
-        height: 40px;
-        bottom: 10px;
-        top: auto;
-    }
-    #prev{ left: 10px;}
-    #next{ right: 10px;}
-
-    /* --- CTA --- */
-    .cta {
-        padding: 60px 20px;
-    }
-    .cta h2 {
-        font-size: 28px;
-    }
-
-     /* --- Sección Esencia 2 --- */
-    .esencia2 .item::before {
-        display: none; /* Ocultamos los números grandes que pueden estorbar */
-    }
-    .esencia2 .item {
-        padding: 20px;
-    }
-}
-
-
 :root {
   --footer-bg: #001262; /* Verde Principal */
   --footer-text: #FFFFFF;
@@ -1456,102 +1103,519 @@ footer {
   background-color: #333;
 }
 
-
-/* --- Responsive para el Footer --- */
-@media (max-width: 992px) {
-  .footer-top-row {
-      grid-template-columns: 1fr; /* Apila las tarjetas */
-  }
-
-  .footer-bottom-row {
-      grid-template-columns: 1fr; /* Apila las secciones */
-      text-align: center;
-      gap: 30px;
-  }
-
-  .footer-logo-area {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .footer-subscribe-area {
-      text-align: center;
-  }
-
-  .footer-subscribe-area form {
-      justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-content {
-      padding: 40px 15px;
-  }
-   .footer-subscribe-area input {
-      max-width: 200px;
-  }
-  .footer-card {
-      padding: 20px;
-  }}
 /* ======================================= */
-/*    REGLAS RESPONSIVE PARA "ESENCIA CAFETERA"    */
+/*        REGLAS RESPONSIVE CORRECTAS        */
 /* ======================================= */
 
-/* Para tablets (hasta 1080px) */
+/* --- Para tablets (hasta 1080px) --- */
 @media (max-width: 1080px) {
+    /* Ajustamos la sección Esencia 2 para que sea más legible en tablets */
     .esencia2 .contenedor-esencia {
-        grid-template-columns: 1fr; /* Cambia a una sola columna para apilar los elementos */
-        gap: 60px; /* Aumentamos el espacio entre elementos apilados */
+        grid-template-columns: 1fr;
+        gap: 60px;
         justify-items: center;
     }
-
     .esencia2 .item {
-        max-width: 480px; /* Un ancho máximo para que el texto no sea demasiado largo */
-        text-align: center;
+      max-width: 480px;
+      text-align: center;
     }
-    
     .esencia2 .item::before {
-        /* Hacemos los números más pequeños y sutiles */
-        font-size: 7rem; 
+        font-size: 7rem;
         top: -25px;
         left: -15px;
         opacity: 0.3;
     }
-
     .esencia2 .centro {
-        /* La imagen central ahora se ordena de forma natural con los demás items */
-        grid-row: auto; 
-        margin-top: 20px;
+        grid-row: auto;
+        margin: 20px 0;
     }
-
     .esencia2 .centro img {
         width: 100%;
         max-width: 380px;
     }
 }
 
-/* Para móviles (hasta 768px) */
+
+/* --- Para móviles (hasta 768px) --- */
 @media (max-width: 768px) {
-    .esencia2 {
-        padding: 60px 20px; /* Menos espacio en los lados */
+    body {
+        /* Damos espacio superior para el header que ahora será fijo y ocupará todo el ancho */
+        padding-top: 80px;
     }
 
-    .esencia2 h2 {
-        font-size: 2rem; /* Título más pequeño */
-        margin-bottom: 40px;
+    /* Header y Menú Hamburguesa */
+    header {
+        /* En móvil, el header sí ocupa todo el ancho */
+        top: 0;
+        width: 100%;
+        transform: none;
+        padding: 10px 15px;
+        background: var(--bg);
+        justify-content: space-between;
+        border-radius: 0;
+    }
+    header.scrolled {
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+    }
+    header .logo-out {
+        margin-right: 0;
+    }
+     header .logo-out img {
+        height: 60px;
+    }
+    .menu-toggle {
+        display: block; /* Mostramos el botón de hamburguesa */
+        right: 15px;
+    }
+    .nav-capsula {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 31, 104, 0.95);
+        backdrop-filter: blur(15px);
+        z-index: 1500;
+        gap: 30px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    .nav-capsula.active {
+        display: flex; /* La mostramos al activarse */
+        transform: translateX(0);
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .nav-links a {
+        font-size: 1.8rem;
+        color: white;
+    }
+    .header-actions {
+       flex-direction: column;
+       gap: 25px;
+    }
+    .nav-capsula .user-btn-link {
+        display: block;
     }
 
-    .esencia2 .item::before {
-        /* En móviles, los números grandes estorban y es mejor ocultarlos */
-        display: none; 
+
+    /* Slider Principal */
+    .slider {
+        margin-top: -80px; /* Pegamos el slider a la parte superior */
+        height: 90vh;
+    }
+    .slider .list .item {
+        width: 80vw;
+    }
+    .slider .content div:nth-child(2) {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+    .slider .content .btn {
+        display: inline-block;
+        opacity: 1;
+        width: auto;
+    }
+    .circle {
+        --radius: calc(100vw / 2.8);
+    }
+    #prev, #next {
+        bottom: 15px;
+        top: auto;
+        transform: none;
     }
 
-    .esencia2 .item {
-        padding: 20px;
-        background: transparent; /* Quitamos el fondo para un look más limpio */
+    /* Resto de secciones */
+    .esencia-cards {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .esencia2 .centro img {
-         max-width: 320px; /* La imagen se hace un poco más pequeña */
+    .esencia2 .item::before {
+        display: none;
+    }
+
+    /* Footer */
+    .footer-top-row, .footer-bottom-row {
+        grid-template-columns: 1fr;
+    }
+    .footer-logo-area, .footer-subscribe-area {
+        flex-direction: column;
+        text-align: center;
+    }
+     .footer-subscribe-area form {
+        justify-content: center;
+    }
+    .footer-contact-card button {
+        align-self: center;
     }
 }
+
+/* ======================================= */
+/*                 FOOTER                  */
+/* ======================================= */
+
+:root {
+  --footer-bg: #001262;
+  --footer-text: #FFFFFF;
+  --footer-card-bg: #FFFFFF;
+  --footer-card-text: #000000;
+  --footer-input-bg: #F3F3F3;
+  --footer-border: rgba(255, 255, 255, 0.4);
+}
+
+.footer-container {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 1.5rem;
+  margin-top: 50px;
+}
+
+.footer-banner {
+  background-color: #fff;
+  color: var(--footer-bg);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.footer-banner-text {
+  display: inline-block;
+  padding-right: 40px;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  display: grid;
+  gap: 30px;
+}
+
+.footer-top-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 30px;
+}
+
+.footer-card {
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.footer-contact-card {
+  background-color: var(--footer-card-bg);
+  color: var(--footer-card-text);
+}
+
+.footer-card h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact-card input[type="text"],
+.footer-contact-card input[type="email"] {
+  background-color: var(--footer-input-bg);
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.footer-contact-card button {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: flex-start;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-contact-card button:hover {
+  background-color: #01004d;
+  transform: scale(1.05);
+}
+
+.footer-thankyou-card {
+  border: 2px solid var(--footer-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-thankyou-card h3 {
+  font-size: 1.8rem;
+}
+
+.footer-thankyou-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-thankyou-card .arrow-button {
+  background-color: #fff;
+  color: var(--footer-bg);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  align-self: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.footer-thankyou-card .arrow-button:hover {
+  transform: scale(1.15) rotate(15deg);
+}
+
+.footer-bottom-row {
+  border: 2px solid var(--footer-border);
+  border-radius: 16px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-logo-area img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.footer-logo-area p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+
+.footer-subscribe-area {
+  text-align: right;
+}
+
+.footer-subscribe-area form {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.footer-subscribe-area input {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.footer-subscribe-area button {
+  background-color: var(--footer-card-text);
+  color: #fff;
+  border: none;
+  padding: 0 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-subscribe-area button:hover {
+  background-color: #333;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+/* Estilo base para todos los botones principales */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background-color: #1a3c9e; /* Un azul más oscuro */
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
+}
+
+/* Estilos específicos para el botón del CTA */
+.btn-cta {
+    font-size: 1.1rem;
+    padding: 16px 35px;
+}
+
+/* ======================================= */
+/*                 FOOTER                  */
+/* ======================================= */
+
+:root {
+  --footer-bg: #001262;
+  --footer-text: #FFFFFF;
+  --footer-card-bg: #FFFFFF;
+  --footer-card-text: #000000;
+  --footer-input-bg: #F3F3F3;
+  --footer-border: rgba(255, 255, 255, 0.4);
+}
+
+.footer-container {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 1.5rem;
+  margin-top: 50px;
+}
+
+.footer-banner {
+  background-color: #fff;
+  color: var(--footer-bg);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.footer-banner-text {
+  display: inline-block;
+  padding-right: 40px;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  display: grid;
+  gap: 30px;
+}
+
+.footer-top-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 30px;
+}
+
+.footer-card {
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.footer-contact-card {
+  background-color: var(--footer-card-bg);
+  color: var(--footer-card-text);
+}
+
+.footer-card h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact-card input[type="text"],
+.footer-contact-card input[type="email"] {
+  background-color: var(--footer-input-bg);
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.footer-contact-card button {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: flex-start;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-contact-card button:hover {
+  background-color: #01004d;
+  transform: scale(1.05);
+}
+
+.footer-thankyou-card {
+  border: 2px solid var(--footer-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;}
+
