@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     id: card.dataset.productId,
                     name: card.dataset.productName,
                     price: parseFloat(card.dataset.productPrice),
-                    img: card.dataset.productImage,
+                    image: card.dataset.productImage, // Corregido de img a image
                 };
 
                 if (window.addToCart) {
