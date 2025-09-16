@@ -7,6 +7,7 @@ const formatCOP = (amount) => {
     }).format(amount);
 };
 
+// ... (La lista de productos completa se mantiene igual)
 const products = [
     {
         id: 'cf-01',
@@ -104,7 +105,7 @@ const products = [
     },
     {
         id: 'p-03',
-        name: 'Cheesecake Frutos Rojos',
+        name: 'Cheesecake',
         price: 12000,
         image: 'assets/cheesecake.png',
         category: 'postres',
@@ -112,7 +113,7 @@ const products = [
     },
     {
         id: 'p-04',
-        name: 'Galleta Choco Chips',
+        name: 'Galletas',
         price: 6000,
         image: 'assets/cookie.png',
         category: 'postres',
@@ -156,36 +157,25 @@ document.addEventListener('DOMContentLoaded', () => {
         productGrid.innerHTML = productsToDisplay.map(product => {
             const tagHtml = product.tag ? `<div class="product-tag ${product.tag}">${product.tag.toUpperCase()}</div>` : '';
 
-            return `
-            <div class="product-card" data-product-id="${product.id}" data-product-name="${product.name}" data-product-price="${product.price}" data-product-image="${product.image}">
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
-                    ${tagHtml}
-                </div>
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <span class="product-price">${formatCOP(product.price)}</span>
-                </div>
-                <button class="add-to-cart-btn">Add to cart</button>
+            // --- CAMBIO PRINCIPAL AQUÍ ---
+            // Se reemplazó el <button> por una etiqueta <a> que lleva a la página de detalle
+        return `
+        <div class="product-card">
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+                ${tagHtml}
             </div>
-            `;
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <span class="product-price">${formatCOP(product.price)}</span>
+            </div>
+            <a href="product-detail.html?id=${product.id}" class="add-to-cart-btn">Ver Opciones</a>
+        </div>
+        `;
+
         }).join('');
 
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const card = e.target.closest('.product-card');
-                const product = {
-                    id: card.dataset.productId,
-                    name: card.dataset.productName,
-                    price: parseFloat(card.dataset.productPrice),
-                    image: card.dataset.productImage, // Corregido de img a image
-                };
-
-                if (window.addToCart) {
-                    window.addToCart(product);
-                }
-            });
-        });
+        // Ya no necesitamos el event listener para los botones, porque los enlaces funcionan por sí solos.
     };
 
     const displayFilterButtons = () => {

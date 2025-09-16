@@ -3,16 +3,16 @@
 /* ======================================= */
 
 :root {
-    --about-bg: #408ad4;
+    --about-bg: #006fdd;
     --about-card-bg: #000000;
     --about-text-primary: #e1eefc;
     --about-text-secondary: #cfe9ff;
-    --about-accent: var(--primary); /* Reutilizamos el azul primario */
+    --about-accent: var(--primary); 
 }
 
-/* Base para la página */
+
 .about-page-body {
-    background-color: var(--about-bg);
+    background: var(--about-bg);
     color: var(--about-text-primary);
     padding-top: 100px; /* Asegura espacio para el header fijo */
 }
@@ -76,7 +76,7 @@
    ========================= */
 .about-me-section {
     display: flex;
-    align-items: flex-start; /* Alinea los items al inicio */
+    align-items: flex-start; 
     gap: 50px;
     padding: 60px 0;
     margin-bottom: 50px;
@@ -195,3 +195,4 @@
         font-size: 2.2rem;
     }
 }
+

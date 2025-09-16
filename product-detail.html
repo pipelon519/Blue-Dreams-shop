@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Producto - Blue Dreams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+      <div class="logo-out">
+          <a href="index.html">
+              <img src="assets/logo.png" alt="Blue Dreams logo">
+          </a>
+      </div>
+      <div class="nav-capsula">
+          <nav class="nav-links">
+              <a href="index.html">Inicio</a>
+              <a href="index.html#esencia">Esencia</a>
+              <a href="products.html" class="active">Productos</a>
+              <a href="about.html">Sobre</a>
+              <a href="contact.html">Contacto</a>
+          </nav>
+          <div class="header-actions">
+              <button class="cart-btn">
+                  <i class="fa-solid fa-shopping-bag"></i>
+                  <span class="cart-count">0</span>
+              </button>
+              <a href="form.html" class="user-btn-link">
+                <button class="user-btn">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+              </a>
+          </div>
+      </div>
+      <div class="menu-toggle">☰</div>
+  </header>
+
+<main class="page-content">
+  <div class="product-detail-container">
+    <!-- Columna Izquierda: Galería de Imágenes -->
+    <div class="product-gallery">
+      <div class="main-image-wrapper">
+        <img src="" alt="Producto Principal" id="main-product-image">
+      </div>
+      <div class="thumbnail-gallery" id="thumbnail-gallery"></div>
+    </div>
+
+    <!-- Columna Derecha: Detalles del Producto -->
+    <div class="product-info">
+      <h1 id="product-name"></h1>
+      <div class="product-rating"></div>
+      <p class="product-description" id="product-short-desc"></p>
+      
+      <div id="product-options-wrapper"></div>
+
+      <div class="product-price-container">
+        <span class="current-price" id="product-price"></span>
+        <span class="original-price" id="product-old-price"></span>
+      </div>
+
+      <div class="product-actions">
+        <div class="quantity-selector">
+          <button id="decrease-qty">-</button>
+          <span id="quantity">1</span>
+          <button id="increase-qty">+</button>
+        </div>
+        <button class="add-to-cart-detail-btn">
+          <i class="fa-solid fa-plus"></i> Añadir al Carrito
+        </button>
+      </div>
+      
+      <div class="product-meta">
+        <p><strong>SKU:</strong> <span id="product-sku"></span></p>
+        <p><strong>Categoría:</strong> <span id="product-category"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related-products-section"></div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-container"></footer>
+
+<!-- === CÓDIGO DEL CARRITO AHORA COMPLETO === -->
+<aside id="cart-sidebar">
+    <div class="cart-header">
+        <div class="cart-header-top">
+            <h3>Tu Orden</h3>
+            <div class="cart-header-actions">
+                <button class="reset-cart-btn" title="Vaciar Carrito"><i class="fa-solid fa-trash"></i> Resetear</button>
+                <button class="close-cart-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-items"><!-- Los productos del carrito se insertan aquí --></div>
+    <div class="cart-footer">
+        <div class="summary-line">
+            <span>Subtotal</span>
+            <span class="price" id="cart-subtotal">$0</span>
+        </div>
+        <div class="summary-line">
+            <span>Total</span>
+            <span class="price" id="cart-total-final">$0</span>
+        </div>
+        <a href="cart.html" class="checkout-btn-link"><button class="checkout-btn">Pagar Ahora</button></a>
+        <button class="continue-shopping-btn">Seguir Comprando</button>
+    </div>
+</aside>
+<div id="cart-overlay"></div>
+<!-- === FIN DEL CÓDIGO DEL CARRITO === -->
+
+
+<script src="main.js"></script>
+<script src="cart.js"></script>
+<script src="product-detail.js"></script>
+</body>
+</html>

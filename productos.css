@@ -5,19 +5,26 @@ a{
     padding-top: 120px;
 }
 
+/* --- Contenedor Principal --- */
 .products-hero.starbucks-style {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 20px 40px; /* Ajustamos el gap */
     align-items: center;
-    padding: 60px 40px;
+    padding: 40px; /* Padding uniforme */
     background-color: #fdfaf6;
     border-radius: 20px;
     margin: 20px;
+    overflow: hidden; /* Previene desbordamientos */
+}
+
+/* --- Lado Izquierdo (Texto) --- */
+.hero-left {
+    padding-left: 20px; /* Añadimos espacio a la izquierda */
 }
 
 .hero-left h1 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -25,67 +32,142 @@ a{
 }
 
 .hero-left p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     margin-bottom: 30px;
+    max-width: 500px;
 }
 
 .price-and-buy {
     display: flex;
     align-items: center;
-    gap: 30px;
-    color: #0042a5;
-}
-header.scrolled nav a{
-    color: #000;
-  }
-.hero-price {
-    font-size: 48px;
-    font-weight: 800;
+    gap: 25px;
 }
 
+.hero-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0042a5;
+}
+
+/* --- Estilo para el botón 'Comprar Ahora' --- */
 .buy-now-btn {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ccc;
+    background-color: #0042a5; /* Color primario */
+    color: #fff; /* Texto blanco */
+    border: none;
     padding: 15px 30px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 50px; /* Bordes redondeados */
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 66, 165, 0.2); /* Sombra suave */
 }
 
 .buy-now-btn:hover {
-    background-color: #000;
-    color: #fff;
-    padding: 15px 35px;
+    background-color: #002a69; /* Tono más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de levantar */
+    box-shadow: 0 8px 20px rgba(0, 66, 165, 0.25);
 }
 
+/* --- Lado Derecho (Imagen) --- */
 .hero-right {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alineamos en columna */
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 30px; /* Espacio entre el círculo y la lista */
+    padding: 20px; /* Padding para que no se pegue al borde */
 }
 
 .hero-image-container {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 320px;  /* Ancho y alto iguales para un círculo perfecto */
+    height: 320px;
+    border-radius: 50%; /* Esto lo hace un círculo */
     background-color: #ffe8b6;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-image-container img {
-    width: 140%;
+    width: 140%; /* Hacemos la imagen más grande que el círculo */
+    height: auto;
     object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.15)); /* Sombra a la imagen */
 }
+
+/* --- Lista de características --- */
+.hero-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-self: stretch; /* Se estira para ocupar el ancho */
+    padding-left: 20px; /* Espacio para alinear con el círculo */
+}
+
+.hero-features li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-features i {
+    font-size: 24px;
+    color: #002575;
+}
+
+.hero-features h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #002575;
+    margin-bottom: 5px;
+}
+
+.hero-features p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ======================================= */
+/*     REGLAS RESPONSIVE CORREGIDAS        */
+/* ======================================= */
+
+@media (max-width: 900px) {
+    .products-hero.starbucks-style {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-left { order: 2; padding: 0;}
+    .hero-right { order: 1; }
+    .hero-left p { margin: 0 auto 30px auto; }
+    .price-and-buy { justify-content: center; }
+}
+
+@media (max-width: 500px) {
+    .products-hero.starbucks-style {
+        padding: 40px 20px;
+        margin: 10px;
+    }
+    .hero-left h1 { font-size: 2.5rem; }
+    .hero-image-container { width: 280px; height: 280px; }
+    .hero-features { padding-left: 0; }
+    .hero-price { font-size: 2rem; }
+    .price-and-buy { flex-direction: column; gap: 20px; }
+}
+
+
 
 .hero-features {
     list-style: none;
@@ -148,33 +230,13 @@ header.scrolled nav a{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #a4c1ff;
+    color: #00319c;
 }
 
-.offer-content-red h4 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #f0f0f0;
-}
 
-.offer-content-red p {
-    font-size: 14px;
-    color: #ffffff;
-}
 .offer-content p {
     font-size: 14px;
-    color: #b3b3b3;
-}
-
-.offer-content span {
-    font-size: 18px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.offer-card.red .offer-content span {
-    color: #fff;
+    color: #031347;
 }
 
 .product-grid-section {
@@ -212,20 +274,7 @@ header.scrolled nav a{
     border-color: #ffffff;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
 
-.product-card {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-}
 
 .product-card h3 {
     color: #0c0075;
@@ -299,4 +348,133 @@ header.scrolled nav a{
 .add-to-cart-btn:hover {
     background-color: #333;
     color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Un poco más pequeño para mejor ajuste */
+    gap: 25px; /* Más espacio entre tarjetas */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.product-image img {
+    max-width: 80%;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Contenedor para el nombre y el precio */
+.product-info {
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el contenido hacia abajo */
+}
+
+.product-card h3 {
+    color: #0c0075;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px; /* Espacio entre el precio y el botón */
+}
+
+/* Estilo para el botón (que es un enlace <a>) */
+.product-card .add-to-cart-btn {
+    display: block;
+    text-decoration: none;
+    background-color: #0042a5;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: auto; /* Asegura que el botón esté al final */
+}
+
+.product-card .add-to-cart-btn:hover {
+    background-color: #002a69;
+}
+
+/* (El resto de tus estilos .product-tag, etc., pueden permanecer como estaban) */
+
+
+.product-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px; /* Aumentamos el padding para más espacio vertical */
+    min-height: 40vh; /* Altura mínima adaptable */
+    
+    background-image: linear-gradient(rgba(0, 20, 80, 0.7), rgba(0, 20, 80, 0.7)), url('assets/fondo2.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+    background-position: center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Efecto parallax al hacer scroll */
+    
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.product-hero-content {
+    max-width: 700px; /* Ancho máximo para el contenido */
+}
+
+.product-hero h1 {
+    font-size: 3.2rem; /* Tamaño de fuente más grande y adaptable */
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para legibilidad */
+}
+
+.product-hero p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* --- Media Queries para Adaptabilidad --- */
+
+@media (max-width: 768px) {
+    .product-hero {
+        min-height: 35vh;
+        padding: 60px 20px;
+        background-attachment: scroll; /* Desactivamos el parallax en móvil por rendimiento */
+    }
+
+    .product-hero h1 {
+        font-size: 2.5rem; /* Ajustamos el tamaño para móviles */
+    }
+
+    .product-hero p {
+        font-size: 1rem;
+    }
 }

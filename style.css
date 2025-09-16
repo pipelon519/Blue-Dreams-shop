@@ -1,3 +1,8 @@
+/* =========================
+   ESTILOS BARRA DE SCROLL PERSONALIZADA
+   ========================= */
+
+/* Funciona en navegadores basados en WebKit (Chrome, Safari, Edge) */
 
 :root {
   --primary: #1d4ed8;
@@ -8,6 +13,24 @@
   --width-circle: 150vw;
   --radius: calc(100vw / 6);
 }
+
+::-webkit-scrollbar {
+  width: 0px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del riel, un gris muy claro */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary); /* Color principal de tu marca (azul) */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a3c9e; /* Un azul más oscuro al pasar el ratón */
+}
+
 
 * {
   margin: 0;
@@ -46,6 +69,44 @@ header {
     z-index: 1000;
     background: transparent;
     transition: background-color 0.4s ease, padding 0.4s ease;
+}
+/* --- Círculo Blur para el Logo al hacer Scroll --- */
+
+/* Hacemos que el contenedor del logo pueda posicionar el círculo */
+header .logo-out {
+  position: relative;
+  z-index: 1; /* Asegura que el logo esté por encima del nuevo círculo */
+}
+
+/* Creamos el círculo con el efecto blur */
+header .logo-out::before {
+  content: '';
+  position: absolute;
+  z-index: -1; /* Lo ponemos detrás del logo */
+  top: 50%;
+  left: 50%;
+
+  /* Tamaño del círculo (puedes ajustarlo si es necesario) */
+  width: 90px;
+  height: 90px;
+
+  /* Estilo glassmorphism */
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  
+  /* Estado inicial: invisible y pequeño */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  
+  /* Transición suave para la aparición */
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+/* Estado cuando se hace scroll: visible y en su tamaño normal */
+header.scrolled .logo-out::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 
@@ -636,6 +697,7 @@ header.scrolled .nav-capsula a{
 .esencia {
   padding: 80px 20px;
   text-align: center;
+  background-color: #081755fd;
 }
 
 .esencia h2 {
@@ -824,98 +886,6 @@ footer {
     background-color: #0a0f1f;
 }
 
-/* =========================
-   SECCIÓN ESENCIA
-   ========================= */
-.esencia2 {
-  padding: 80px 20px;
-  background: #0b1a36; /* fondo oscuro estilo elegante */
-  color: #fff;
-  text-align: center;
-}
-
-.esencia2 h2 {
-  font-size: 2.5rem;
-  color: #3bc9ff;
-  margin-bottom: 60px;
-}
-
-/* Grid principal */
-.esencia2 .contenedor-esencia {
-  display: grid;
-  grid-template-columns: 1fr 300px 1fr; /* 3 columnas */
-  grid-template-rows: auto auto;
-  gap: 40px;
-  align-items: center;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* Items */
-.esencia2 .item {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 16px;
-  position: relative;
-  max-width: 320px;
-}
-
-.esencia2 .item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #3bc9ff;
-}
-
-.esencia2 .item p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Números grandes */
-.esencia2 .item::before {
-  content: attr(data-num);
-  position: absolute;
-  top: -40px;
-  left: -100px;
-  font-size: 8rem;
-  font-weight: 900;
-  color: rgba(28, 100, 255, 0.603);
-  z-index: 0;
-}
-
-/* Imagen central */
-.esencia2 .centro {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.esencia2 .centro img {
-  width: 480px;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
-}
-
-.esencia2 .centro button {
-  background: #ffffff;
-  color: #000000;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.esencia2 .centro button:hover {
-  background: var(--glass);
-  color: var(--secondary);
-  padding: 15px 30px;
-}
 
 /* Responsive */
 
@@ -1184,9 +1154,34 @@ footer {
     header.scrolled {
         background: var(--glass);
         backdrop-filter: blur(10px);
+        width: 100%;
     }
     header .logo-out {
         margin-right: 0;
+        
+    }
+    header .logo-out::before {
+      content: '';
+      position: absolute;
+      z-index: -1; /* Lo ponemos detrás del logo */
+      top: 50%;
+      left: 50%;
+    
+      /* Tamaño del círculo (puedes ajustarlo si es necesario) */
+      width: 90px;
+      height: 90px;
+    
+      /* Estilo glassmorphism */
+      background: none;
+      backdrop-filter: none;
+      border-radius: 0;
+      
+      /* Estado inicial: invisible y pequeño */
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+      
+      /* Transición suave para la aparición */
+      transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.4s ease;
     }
      header .logo-out img {
         height: 60px;
@@ -1529,6 +1524,176 @@ footer {
     padding: 16px 35px;
 }
 
+/* =============================================
+   SECCIÓN ESENCIA INSPIRADA
+   ============================================= */
+
+/* Contenedor principal de la sección */
+.esencia-inspirada {
+  background-color: #081755fd;
+  padding: 100px 20px;
+  overflow: hidden; 
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid layout principal - AJUSTADO */
+.esencia-inspirada-grid {
+  display: grid;
+  /* Columnas: Texto Izq | Imagen Central | Texto Der */
+  grid-template-columns: 1fr minmax(250px, 300px) 1fr;
+  /* Filas: Título, Contenido, Botón */
+  grid-template-rows: auto 1fr 1fr auto;
+  max-width: 1200px;
+  margin: auto;
+  /* Espacio aumentado entre columnas para que no se monte */
+  gap: 15px 80px; 
+  position: relative;
+  align-items: center;
+}
+
+/* --- Posicionamiento de elementos en el Grid --- */
+.esencia-titulo-central { 
+  grid-area: 1 / 1 / 2 / 4; /* Ocupa todo el ancho de la primera fila */
+  text-align: center; 
+  margin-bottom: 20px;
+}
+.esencia-imagen-central {
+  /* Ocupa las dos filas de contenido en la columna central */
+  grid-area: 2 / 2 / 4 / 3; 
+  align-self: center;
+  justify-self: center;
+  z-index: 2;
+}
+.esencia-boton-central {
+  grid-area: 4 / 2 / 5 / 3; /* Debajo de la imagen */
+  text-align: center;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+/* Atributos en las columnas laterales */
+.esencia-atributo.item-1 { grid-area: 2 / 1 / 3 / 2; text-align: right; justify-self: end;}
+.esencia-atributo.item-2 { grid-area: 3 / 1 / 4 / 2; text-align: right; justify-self: end;}
+.esencia-atributo.item-3 { grid-area: 2 / 3 / 3 / 4; text-align: left; justify-self: start;}
+.esencia-atributo.item-4 { grid-area: 3 / 3 / 4 / 4; text-align: left; justify-self: start;}
+
+
+/* --- Estilos de los elementos --- */
+.esencia-titulo-central h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #c0b5a7;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.esencia-imagen-central img {
+  width: 100%; /* La imagen se ajusta a la columna central */
+  max-width: 280px;
+  filter: drop-shadow(0px 10px 30px rgba(0,0,0,0.5));
+}
+
+.btn-esencia {
+  background-color: #82c0cc;
+  color: #211d1c;
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-esencia:hover {
+  background-color: #9edde9;
+  transform: scale(1.05);
+}
+
+.esencia-atributo {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  max-width: 350px; /* Evita que el texto sea demasiado ancho */
+}
+
+.esencia-atributo h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e0d5c6;
+  margin-bottom: 10px;
+}
+
+.esencia-atributo p {
+  font-size: 0.9rem;
+  color: #a09587;
+  line-height: 1.6;
+}
+
+/* --- Números gigantes de fondo - AJUSTADO --- */
+.numero-fondo {
+  position: absolute;
+  font-size: 9rem; /* Un poco más pequeños */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05); /* Ligeramente más visible */
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none; /* Evita que se puedan seleccionar */
+}
+
+/* Posiciones ajustadas para que no se corten tanto */
+.item-1 .numero-fondo,
+.item-2 .numero-fondo { 
+  right: -20px; 
+}
+.item-3 .numero-fondo,
+.item-4 .numero-fondo { 
+  left: -20px; 
+}
+
+
+/* ---- RESPONSIVE DESIGN - AJUSTADO ---- */
+@media (max-width: 900px) {
+  .esencia-inspirada-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto;    /* Filas automáticas */
+    gap: 40px; /* Más espacio en móvil */
+  }
+
+  /* Reseteamos todas las áreas y centramos el texto */
+  .esencia-titulo-central,
+  .esencia-imagen-central,
+  .esencia-boton-central,
+  .esencia-atributo {
+    grid-area: auto !important; 
+    text-align: center !important;
+    justify-self: center !important;
+  }
+  
+  .esencia-atributo p {
+      margin: 0 auto;
+  }
+
+  /* Orden visual para móviles */
+  .esencia-titulo-central { order: 1; }
+  .esencia-imagen-central { order: 2; margin: 20px 0; }
+  .esencia-atributo.item-1 { order: 3; }
+  .esencia-atributo.item-3 { order: 4; } 
+  .esencia-atributo.item-2 { order: 5; }
+  .esencia-atributo.item-4 { order: 6; }
+  .esencia-boton-central { order: 7; margin-top: 20px;}
+  
+  .numero-fondo {
+    font-size: 8rem;
+    opacity: 0.04;
+    /* Centramos los números en móvil */
+    left: 50%; 
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+  
 /* ======================================= */
 /*                 FOOTER                  */
 /* ======================================= */
