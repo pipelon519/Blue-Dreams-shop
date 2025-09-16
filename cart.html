@@ -112,15 +112,15 @@
                         <img src="${item.image}" alt="${item.name}">
                         <div class="item-details">
                             <h5>${item.name} (x${item.quantity})</h5>
-                            <p>$${(item.price * item.quantity).toFixed(3)}</p>
+                            <p>$${(item.price * item.quantity)}</p>
                         </div>
                     `;
                     cartItemsContainer.appendChild(itemElement);
                 });
 
                 const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-                cartSubtotal.textContent = `$${subtotal.toFixed(3)}`;
-                cartTotal.textContent = `$${subtotal.toFixed(3)}`;
+                cartSubtotal.textContent = `$${subtotal}`;
+                cartTotal.textContent = `$${subtotal}`;
             }
             
             paymentForm.addEventListener('submit', (e) => {

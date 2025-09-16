@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Base de Datos DEFINITIVA con Opciones Detalladas y Corregidas ---
     const productsDB = {
         'cf-01': {
-            name: 'Caramel Frappuccino', base_price: 13500, short_desc: 'Café con sirope de caramelo, leche y crema batida.', images: ['assets/frapuccino.png', 'assets/gallery-thumb-2.png', 'assets/gallery-thumb-3.png', 'assets/gallery-thumb-4.png'], rating: 4.8, reviews: 245, sku: 'BD-CF-001', category: 'Café Helado',
+            name: 'Caramel Frappuccino', base_price: 13500, short_desc: 'Café con sirope de caramelo, leche y crema batida.', images: ['assets/frapuccino.png'], rating: 4.8, reviews: 245, sku: 'BD-CF-001', category: 'Café Helado',
             options: [
                 { title: 'Tamaño', items: [{ name: 'Pequeño', price_modifier: 0 }, { name: 'Mediano', price_modifier: 1000 }, { name: 'Grande', price_modifier: 2500 }] },
                 { title: 'Tipo de Leche', items: [{ name: 'Entera', price_modifier: 0 }, { name: 'Deslactosada', price_modifier: 500 }, { name: 'Almendras', price_modifier: 1500 }] },
@@ -17,8 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'p-01':  {
-            name: 'Torta de Limón', base_price: 9500, short_desc: 'Suave y esponjosa torta con un glaseado de limón.', images: ['assets/torta-limon-1.png', 'assets/torta-limon.png'], rating: 4.9, reviews: 150, sku: 'BD-P-001', category: 'Postres',
+            name: 'Pastel', base_price: 5500, short_desc: 'Suave y esponjosa torta con un glaseado de limón.', images: ['assets/torta-limon-1.png', 'assets/torta-limon.png', 'assets/pastel1.avif', 'assets/pastel2.jpg', 'assets/pastel3.jpg', 'assets/selva-negra.avif'], rating: 4.9, reviews: 150, sku: 'BD-P-001', category: 'Postres',
             options: [
+                { title: 'Sabor', items: [{ name: 'Vainilla', price_modifier: 0 }, { name: 'Chocolate', price_modifier: 0 }, { name: 'Fresa', price_modifier: 0 }, { name: 'Vainilla y Chocolate', price_modifier: 0 }, { name: 'Frutos Rojos', price_modifier: 0 }, { name: 'Limón', price_modifier: 0 }, { name: 'Selva Negra', price_modifier: 0 }, { name: 'Vainilla y Fresa', price_modifier: 0 }, { name: 'Vainilla y Limón', price_modifier: 0 }, { name: 'Chocolate y Fresa', price_modifier: 0 }, { name: 'Chocolate y Limón', price_modifier: 0 }, { name: 'Fresa y Limón', price_modifier: 0 }, { name: 'Vainilla y Selva Negra', price_modifier: 0 }, { name: 'Chocolate y Selva Negra', price_modifier: 0 }, { name: 'Fresa y Selva Negra', price_modifier: 0 },] },
+                { title: 'Porciones', items: [{ name: 'Una', price_modifier: 0 }, { name: 'Dos', price_modifier: 3500 }, { name: 'Tres', price_modifier: 6000 }] },
                 { title: 'Adicional', items: [{ name: 'Ninguno', price_modifier: 0 }, { name: 'Bola de Helado', price_modifier: 3000 }, { name: 'Salsa de Chocolate', price_modifier: 1500 }] }
             ]
         },
@@ -76,10 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'p-02':  {
-            name: 'Brownie con Helado', base_price: 11500, short_desc: 'Brownie de chocolate tibio con una bola de helado de vainilla.', images: ['assets/brownie.png', 'assets/gallery-thumb-2.png', 'assets/gallery-thumb-3.png', 'assets/gallery-thumb-4.png'], rating: 4.9, reviews: 310, sku: 'BD-P-002', category: 'Postres',
+            name: 'Brownie con Helado', base_price: 11500, short_desc: 'Brownie de chocolate tibio con una bola de helado de vainilla.', images: ['assets/brownie.png', 'assets/brownie-1.jfif'], rating: 4.9, reviews: 310, sku: 'BD-P-002', category: 'Postres',
             options: [
                 { title: 'Salsa', items: [{ name: 'Chocolate', price_modifier: 0 }, { name: 'Caramelo', price_modifier: 500 }, { name: 'Frutos Rojos', price_modifier: 500 }] },
-                { title: 'Adicional', items: [{ name: 'Ninguno', price_modifier: 0 }, { name: 'Nueces', price_modifier: 1200 }] }
+                { title: 'Adicional', items: [{ name: 'Ninguno', price_modifier: 0 }, { name: 'Nueces', price_modifier: 1000 }, { name: 'M&Ms', price_modifier: 1500 }, {name:'Grajeas', price_modifier: 500 }], },
+                {title: 'Sabor De Helado', items: [{ name: 'Vainilla', price_modifier: 0 }, { name: 'Chocolate', price_modifier: 0 }, { name: 'Arequipe', price_modifier: 0 }, { name: 'Frutos Rojos', price_modifier: 0 }, { name: 'Vainilla y Chocolate', price_modifier: 0 }] },
+                {title: 'Porciones De Helado', items: [ { name: 'Una', price_modifier: 0}, {name: 'Dos', price_modifier: 3500}, {name: 'Tres', price_modifier: 6000}]}
             ]
         },
         'p-03':  {
@@ -89,9 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'p-04':  {
-            name: 'Galletas', base_price: 6000, short_desc: 'Elige tu sabor favorito y llévalas por unidad o en nuestras cajas especiales.', images: ['assets/cookie.png', 'assets/caja-galletas.jpg', 'assets/galletas-varias.jpg'], rating: 4.8, reviews: 400, sku: 'BD-P-004', category: 'Postres',
+            name: 'Galletas Artesanales', base_price: 6000, short_desc: 'Elige tu sabor favorito y llévalas por unidad o en nuestras cajas especiales.', images: ['assets/cookie.png', 'assets/caja-galletas.jpg', 'assets/galletas-varias.jpg'], rating: 4.8, reviews: 400, sku: 'BD-P-004', category: 'Postres',
             options: [
-                { title: 'Sabor', items: [{ name: 'Choco Chips', price_modifier: 0 }, { name: 'Avena Pasas', price_modifier: 0 }, { name: 'Red Velvet', price_modifier: 1000 }, { name: 'Macadamia', price_modifier: 1500 }, { name: 'Vainilla', price_modifier: 0}, { name: 'Chocolate', price_modifier: 0 }, { name: 'Frutos Rojos', price_modifier: 0 }, { name: 'Vainilla y Chocolate', price_modifier: 0 }, { name: 'Vainilla y Macadamia', price_modifier: 0 }, { name: 'Chocolate y Macadamia', price_modifier: 0 }, { name: 'Chocolate y Vainilla', price_modifier: 0 }] },
+                { title: 'Sabor', items: [{ name: 'Choco Chips', price_modifier: 0 }, { name: 'Avena Pasas', price_modifier: 0 }, { name: 'Red Velvet', price_modifier: 1000 }, { name: 'Macadamia', price_modifier: 1500 }] },
                 { title: 'Presentación', items: [{ name: 'Unidad', price_modifier: 0 }, { name: 'Caja x4', price_modifier: 16000 }, { name: 'Caja x12', price_modifier: 59000 }] },
                 { title: 'Adicional', items: [{ name: 'Ninguno', price_modifier: 0 }, { name: 'Vaso de Leche', price_modifier: 2000 }, { name: 'Salsa de Chocolate', price_modifier: 1500 }] }
             ]

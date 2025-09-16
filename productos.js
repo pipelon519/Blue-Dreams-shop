@@ -28,9 +28,9 @@ const products = [
     },
     {
         id: 'p-01',
-        name: 'Torta de Limón',
-        price: 9500,
-        image: 'assets/torta-limon.png',
+        name: 'Pasteles',
+        price: 5500,
+        image: 'assets/torta-zanahoria.png',
         category: 'postres',
         description: 'Suave y esponjosa torta con un glaseado de limón.'
     },

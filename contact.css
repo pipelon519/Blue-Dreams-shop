@@ -3,13 +3,13 @@
 /* ======================================= */
 
 :root {
-    --contact-bg: #f8f9fa; /* Fondo claro para la página */
+    --contact-bg: #0054a8; /* Fondo claro para la página */
     --contact-card-bg: #ffffff; /* Fondo blanco para las tarjetas */
     --contact-text-primary: #212529;
-    --contact-text-secondary: #6c757d;
+    --contact-text-secondary: #0c00bb;
     --contact-input-bg: #f8f9fa;
-    --contact-input-border: #dee2e6;
-    --contact-accent: var(--primary); /* Azul de la marca */
+    --contact-input-border: #0080ff;
+    --contact-accent: var(--primary); 
 }
 
 .contact-page-body {
@@ -59,10 +59,11 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
+    color: var(--contact-bg);
 }
 
 .contact-form-wrapper p {
-    color: var(--contact-text-secondary);
+    color: black;
     margin-bottom: 30px;
 }
 
@@ -75,6 +76,7 @@
     font-weight: 600;
     margin-bottom: 8px;
     font-size: 0.9rem;
+    color: black;
 }
 
 .form-group input,
@@ -152,7 +154,7 @@
 
 .contact-info-item p,
 .contact-info-item a {
-    color: var(--contact-text-secondary);
+    color:white;
     text-decoration: none;
     line-height: 1.6;
 }
@@ -162,9 +164,9 @@
 }
 
 .contact-map-wrapper {
-    margin-top: auto; /* Empuja el mapa hacia abajo */
+    margin-top: auto;
     width: 100%;
-    height: 250px;
+    height: 350px;
     border-radius: 16px;
     overflow: hidden;
 }
