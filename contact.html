@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Blue Dreams</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="contact.css">
 </head>
-<body class="contact-page-body">
+<body>
     <header>
         <div class="logo-out">
            <a href="index.html">
@@ -40,19 +40,16 @@
        <div class="menu-toggle">☰</div>
    </header>
 
-    <main>
+    <main class="contact-page-main">
         <section class="contact-hero">
-            <h1>Contáctanos</h1>
+            <h1>Ponte en Contacto</h1>
             <p>¿Tienes alguna pregunta, sugerencia o simplemente quieres saludar? ¡Estamos aquí para escucharte!</p>
         </section>
 
-        <div class="contact-main-content">
-            
-            <!-- Columna del Formulario -->
+        <div class="contact-container">
             <div class="contact-form-wrapper">
-                <h2>Ponte en Contacto</h2>
-                <p>Completa el formulario y te responderemos lo antes posible.</p>
-                <form action="#" method="POST">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" required>
@@ -67,121 +64,50 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
             </div>
-
-            <!-- Columna de Información de Contacto -->
+            
             <div class="contact-info-wrapper">
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fas fa-phone"></i></div>
-                    <div class="details">
-                        <h3>Teléfono</h3>
-                        <a href="tel:+573122230625">+57 312 2230625</a>
-                    </div>
+                <div class="contact-info-card">
+                    <h3><i class="fa-solid fa-location-dot"></i> Visítanos</h3>
+                    <p>Calle Falsa 123, Ciudad Gótica</p>
+                    <p>Colombia</p>
                 </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fas fa-envelope"></i></div>
-                    <div class="details">
-                        <h3>Correo Electrónico</h3>
-                        <a href="mailto:bd.dulceria@gmail.com">contacto@bluedreams.com</a>
-                    </div>
+                <div class="contact-info-card">
+                    <h3><i class="fa-solid fa-envelope"></i> Escríbenos</h3>
+                    <p>hola@bluedreams.com</p>
                 </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
-                    <div class="details">
-                        <h3>Whatsapp</h3>
-                        <a href="https://wa.me/573122230625" target="_blank">Chatea con nosotros</a>
-                    </div>
+                <div class="contact-info-card">
+                    <h3><i class="fa-solid fa-phone"></i> Llámanos</h3>
+                    <p>+57 300 123 4567</p>
                 </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="details">
-                        <h3>Nuestra Ubicación</h3>
-                        <p>Calle 10a #22-14, Florida - Valle</p>
-                    </div>
-                </div>
-                <div class="contact-map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d290.9600606994998!2d-76.23525521077143!3d3.3245881404095394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3a12d265ff33d9%3A0x7a33076c7e20b8db!2sBroaster%20Frit!5e0!3m2!1ses-419!2sco!4v1757993114991!5m2!1ses-419!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map-placeholder">
+                    <!-- El iframe de Google Maps irá aquí -->
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47339331165!2d-75.6453005401188!3d6.244198899808945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1689196838888!5m2!1ses!2sco" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
         </div>
     </main>
 
     <footer class="footer-container">
-        <div class="footer-banner" aria-hidden="true">
-            <div class="footer-banner-text">
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-                <span>BLUE DREAMS</span><span style="margin: 0 20px;">•</span>
-            </div>
-        </div>
-        <div class="footer-content">
-            <div class="footer-top-row">
-                <div class="footer-card footer-contact-card">
-                    <h3>CONTACTO</h3>
-                    <form action="#">
-                        <input type="text" placeholder="Nombre" aria-label="Nombre">
-                        <input type="email" placeholder="Correo Electrónico" aria-label="Correo Electrónico">
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-                <div class="footer-card footer-thankyou-card">
-                    <h3>¡GRACIAS!</h3>
-                    <p>Gracias por visitar nuestro sitio y ser parte de este sueño azul.</p>
-                    <a href="#" class="arrow-button" aria-label="Explorar más">→</a>
-                </div>
-            </div>
-            <div class="footer-bottom-row">
-                <div class="footer-logo-area">
-                    <img src="assets/Flogo.png" alt="Logo de Blue Dreams">
-                    <p>Nos dedicamos a crear experiencias únicas con un diseño elegante y funcional. Hecho con pasión.</p>
-                </div>
-                <div class="footer-subscribe-area">
-                    <h3>SUSCRÍBETE</h3>
-                    <form action="#">
-                        <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico para suscribirse">
-                        <button type="submit" aria-label="Suscribirse">→</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- El contenido del footer se cargará con main.js si es necesario -->
     </footer>
 
-    <!-- Carrito -->
     <aside id="cart-sidebar">
         <div class="cart-header">
-            <div class="cart-header-top">
-                <h3>Tu Orden</h3>
-                <div class="cart-header-actions">
-                    <button class="reset-cart-btn" title="Vaciar Carrito"><i class="fa-solid fa-trash"></i> Resetear</button>
-                    <button class="close-cart-btn">&times;</button>
-                </div>
-            </div>
+            <h3>Tu Orden</h3><button class="close-cart-btn">&times;</button>
         </div>
         <div class="cart-items"></div>
         <div class="cart-footer">
-            <div class="summary-line">
-                <span>Subtotal</span>
-                <span class="price" id="cart-subtotal">$0</span>
-            </div>
-            <div class="summary-line">
-                <span>Total</span>
-                <span class="price" id="cart-total-final">$0</span>
-            </div>
-            <a href="cart.html" class="checkout-btn-link"><button class="checkout-btn">Pagar Ahora</button></a>
-            <button class="continue-shopping-btn">Seguir Comprando</button>
+            <div class="summary-line"><span>Subtotal</span><span id="cart-subtotal">$0</span></div>
+            <button class="checkout-btn">Pagar Ahora</button>
         </div>
     </aside>
     <div id="cart-overlay"></div>
 
-    <!-- Scripts -->
     <script src="main.js"></script>
     <script src="cart.js"></script>
 </body>

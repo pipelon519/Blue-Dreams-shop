@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px; /* Ancho de la barra */
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -192,7 +192,7 @@ header.scrolled .nav-capsula {
   justify-content: space-between;
 }
 header.scrolled .nav-capsula a{
-  color: black;
+  color: rgb(255, 255, 255);
 }
 /* =========================
    BOTÓN DE USUARIO
@@ -1632,13 +1632,20 @@ footer {
 /* --- Números gigantes de fondo - AJUSTADO --- */
 .numero-fondo {
   position: absolute;
-  font-size: 9rem; /* Un poco más pequeños */
+  font-size: 9rem; 
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.05); /* Ligeramente más visible */
+  color: rgba(255, 255, 255, 0.322); /* Ligeramente más visible */
   z-index: -1;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   user-select: none; /* Evita que se puedan seleccionar */
+}
+
+.nizq{
+  transform: translateX(-10%), ;
+}
+.ndere{
+  transform: translateX(20px);
 }
 
 /* Posiciones ajustadas para que no se corten tanto */
