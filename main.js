@@ -47,50 +47,64 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===================================
     // LÓGICA DEL SLIDER PRINCIPAL
     // ===================================
-    const mainSlider = document.querySelector('.slider');
+   // ===================================
+// LÓGICA DEL SLIDER PRINCIPAL (CON FUNCIÓN DE ROTACIÓN ADAPTABLE)
+// ===================================
+const mainSlider = document.querySelector('.slider');
 if (mainSlider) {
-    let list = mainSlider.querySelector('.list');
-    let items = mainSlider.querySelectorAll('.list .item');
-    let prev = document.getElementById('prev');
-    let next = document.getElementById('next');
+    const list = mainSlider.querySelector('.list');
+    const items = mainSlider.querySelectorAll('.list .item');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const circle = document.querySelector('.circle');
 
     if (list && items.length > 0 && prev && next) {
         let count = items.length;
-        let active = 1; // Empezar desde el segundo item
-        let width_item = items[active] ? items[active].offsetWidth : 0;
+        let active = 1; // El índice del item activo
 
-        function runCarousel() {
+        const runCarousel = () => {
             if (active < 0 || active >= count) return;
+
+            // Se calcula el ancho del item activo actual. Puede variar si la ventana cambia.
+            const width_item = items[active].offsetWidth;
+            if (width_item === 0) return; // Evitar cálculos si el elemento está oculto
+
+            // Ocultar/mostrar botones en los extremos
             prev.style.display = (active === 0) ? 'none' : 'block';
             next.style.display = (active === count - 1) ? 'none' : 'block';
-            
-            let old_active = mainSlider.querySelector('.item.active');
-            if (old_active) old_active.classList.remove('active');
+
+            // Limpiar la clase 'active' de cualquier otro item
+            items.forEach(item => item.classList.remove('active'));
+            // Aplicar la clase 'active' solo al item actual para la rotación 0
             items[active].classList.add('active');
+
+            // Calcular la posición X para centrar el elemento activo.
+            // Se resta la mitad del ancho del viewport menos la mitad del ancho del item para centrarlo.
+            const leftPosition = (mainSlider.offsetWidth / 2) - (width_item / 2);
+            const transformX = -items[active].offsetLeft + leftPosition;
             
-            let leftTransform = width_item * (active - 1) * -1;
-            list.style.transform = `translateX(${leftTransform}px)`;
-        }
+            // Aplicar la transformación de traslación a la lista completa
+            list.style.transform = `translateX(${transformX}px)`;
+        };
 
-        next.addEventListener('click', () => {
-            active = active >= count - 1 ? count - 1 : active + 1;
+        next.onclick = () => {
+            active = Math.min(active + 1, count - 1);
             runCarousel();
-        });
+        };
 
-        prev.addEventListener('click', () => {
-            active = active <= 0 ? 0 : active - 1;
+        prev.onclick = () => {
+            active = Math.max(active - 1, 0);
             runCarousel();
-        });
+        };
 
-        let resizeObserver = new ResizeObserver(() => {
-            width_item = items[active] ? items[active].offsetWidth : 0;
-            runCarousel();
-        });
+        // El ResizeObserver se asegura de que runCarousel se ejecute si cambia el tamaño
+        // Esto hace que la rotación y posición se recalculen y se adapten siempre
+        let resizeObserver = new ResizeObserver(runCarousel);
         resizeObserver.observe(mainSlider);
 
-        let circle = document.querySelector('.circle');
+        // Animación del texto en círculo (sin cambios)
         if (circle && circle.innerText) {
-            let textCircle = circle.innerText.split('');
+            const textCircle = circle.innerText.split('');
             circle.innerText = '';
             textCircle.forEach((value, key) => {
                 let newSpan = document.createElement("span");
@@ -101,9 +115,11 @@ if (mainSlider) {
             });
         }
         
-        runCarousel(); // Llama inicial para establecer la posición
+        // Llamada inicial para que todo se posicione correctamente al cargar la página
+        runCarousel();
     }
 }
+
 
     // ========================================================
     //  CONTROL CENTRALIZADO PARA ABRIR Y CERRAR EL CARRITO
