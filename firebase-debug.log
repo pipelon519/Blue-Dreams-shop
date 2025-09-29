@@ -202,3 +202,226 @@ INFO: Connected to new websocket client
 [debug] [2025-09-20T03:00:32.886Z] Sep 20, 2025 3:00:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
  {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 3:00:32 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-09-20T03:21:50.252Z] Sep 20, 2025 3:21:50 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 3:21:50 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T04:00:14.464Z] Sep 20, 2025 4:00:14 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:00:14 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T04:35:00.031Z] Sep 20, 2025 4:35:00 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:35:00 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-09-20T04:35:00.050Z] Sep 20, 2025 4:35:00 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:35:00 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-09-20T04:35:00.840Z] Sep 20, 2025 4:35:00 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:35:00 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-09-20T04:35:19.753Z] Sep 20, 2025 4:35:19 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:35:19 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-09-20T04:35:20.478Z] Sep 20, 2025 4:35:20 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:35:20 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-09-20T04:37:40.069Z] Sep 20, 2025 4:37:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 4:37:40 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.532Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.539Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.552Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nSep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.578Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.590Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.595Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-09-20T06:48:16.604Z] Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 20, 2025 6:48:16 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:09.753Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:09.754Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:09.756Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:09.770Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:09.770Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.054Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.055Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.055Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.057Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.057Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.062Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.063Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.063Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.065Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.065Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.069Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.069Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.069Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.070Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.070Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:10.217Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.217Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.218Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.219Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.219Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.224Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.224Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.224Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.225Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.225Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.228Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.229Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.229Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.230Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.230Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.234Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.234Z] Checked if tokens are valid: false, expires at: 1758339716564
+[debug] [2025-09-29T01:42:10.234Z] > refreshing access token with scopes: []
+[debug] [2025-09-29T01:42:10.235Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-29T01:42:10.235Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.360Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.360Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.412Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [none]
+[debug] [2025-09-29T01:42:10.414Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.441Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.444Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.472Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-09-29T01:42:10.472Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.588Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.588Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.612Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-09-29T01:42:10.613Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.636Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.638Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.663Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [none]
+[debug] [2025-09-29T01:42:10.665Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.707Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.708Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.743Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [none]
+[debug] [2025-09-29T01:42:10.745Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.762Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.765Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.826Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [none]
+[debug] [2025-09-29T01:42:10.827Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.843Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.843Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.869Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-09-29T01:42:10.869Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:10.916Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-29T01:42:10.918Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-29T01:42:10.982Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-09-29T01:42:10.983Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:11.127Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-09-29T01:42:11.129Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:11.131Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-09-29T01:42:11.131Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:11.134Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com 403
+[debug] [2025-09-29T01:42:11.135Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [omitted]
+[debug] [2025-09-29T01:42:11.138Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-09-29T01:42:11.140Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:11.145Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ 200
+[debug] [2025-09-29T01:42:11.145Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [omitted]
+[debug] [2025-09-29T01:42:11.154Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com 403
+[debug] [2025-09-29T01:42:11.154Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [omitted]
+[debug] [2025-09-29T01:42:11.163Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-09-29T01:42:11.163Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:11.268Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ 200
+[debug] [2025-09-29T01:42:11.268Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:11.333Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-29T01:42:11.380Z] > authorizing via signed-in user (epilef519@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:36.093Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.094Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.095Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.096Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.096Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.097Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.097Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.098Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.100Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [none]
+[debug] [2025-09-29T01:42:36.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.267Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-09-29T01:42:36.268Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.272Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-09-29T01:42:36.273Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.276Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [none]
+[debug] [2025-09-29T01:42:36.276Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com x-goog-quota-user=projects/samuel-a4122
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:36.386Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.386Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.389Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.389Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.389Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.390Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.390Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.390Z] Checked if tokens are valid: true, expires at: 1759113729918
+[debug] [2025-09-29T01:42:36.390Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [none]
+[debug] [2025-09-29T01:42:36.390Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.398Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-09-29T01:42:36.398Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.404Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-09-29T01:42:36.404Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.407Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [none]
+[debug] [2025-09-29T01:42:36.407Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com x-goog-quota-user=projects/samuel-a4122
+[debug] [2025-09-29T01:42:36.475Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com 403
+[debug] [2025-09-29T01:42:36.475Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [omitted]
+[debug] [2025-09-29T01:42:36.477Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-09-29T01:42:36.477Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:36.479Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-09-29T01:42:36.479Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:36.516Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com 403
+[debug] [2025-09-29T01:42:36.517Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseio.com [omitted]
+[debug] [2025-09-29T01:42:36.531Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-09-29T01:42:36.531Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:36.546Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-09-29T01:42:36.546Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-09-29T01:42:36.788Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ 200
+[debug] [2025-09-29T01:42:36.789Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [omitted]
+[debug] [2025-09-29T01:42:36.835Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ 200
+[debug] [2025-09-29T01:42:36.835Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/samuel-a4122/services/ [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:36.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-29T01:42:36.848Z] > authorizing via signed-in user (epilef519@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:36.880Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-29T01:42:36.880Z] > authorizing via signed-in user (epilef519@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-09-29T01:42:36.900Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-29T01:42:36.900Z] > authorizing via signed-in user (epilef519@gmail.com)
