@@ -18,6 +18,7 @@
 
 .form-main-container {
     display: flex;
+    flex-direction: column; /* Apila el form y el mensaje de estado */
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ocupa toda la altura de la pantalla */
@@ -55,19 +56,19 @@
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-#login-form {
+#login-form-container {
     transform: translateX(0);
 }
 
-#signup-form {
+#signup-form-container {
     transform: translateX(100%);
 }
 
-.form-box.show-signup #login-form {
+.form-box.show-signup #login-form-container {
     transform: translateX(-100%);
 }
 
-.form-box.show-signup #signup-form {
+.form-box.show-signup #signup-form-container {
     transform: translateX(0);
 }
 
@@ -144,13 +145,38 @@
     text-decoration: underline;
 }
 
+/* Estilos para los mensajes de estado del formulario */
+#form-status-message {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#form-status-message.success {
+    background-color: rgba(40, 167, 69, 0.85); /* Verde con transparencia */
+    border: 1px solid rgba(34, 139, 58, 0.9);
+}
+
+#form-status-message.error {
+    background-color: rgba(220, 53, 69, 0.85); /* Rojo con transparencia */
+    border: 1px solid rgba(185, 45, 58, 0.9);
+}
+
+
 @media (max-width: 480px) {
     .form-main-container {
         padding-top: 100px;
         align-items: flex-start; /* Alinea el form arriba en móviles */
     }
     .form-box {
-        margin: 0 10px;
+        margin: 0;
     }
 
     .form-container {

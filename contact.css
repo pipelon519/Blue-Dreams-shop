@@ -46,7 +46,7 @@
 .contact-form-wrapper h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: var(--primary-dark);
+    color: #004085;
 }
 
 .form-group {
@@ -94,6 +94,7 @@
 
 .submit-btn:hover {
     background: var(--primary-dark);
+    color: #004085;
 }
 
 /* Información de contacto */
@@ -114,7 +115,7 @@
 .contact-info-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: var(--primary-dark);
+    color:#004085;
 }
 
 .contact-info-card h3 i {

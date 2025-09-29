@@ -7,6 +7,7 @@
   packages = [
     pkgs.nodejs_20
     pkgs.python3
+    pkgs.jdk # Añadido para los emuladores de Firebase
   ];
   # Sets environment variables in the workspace
   env = {};
